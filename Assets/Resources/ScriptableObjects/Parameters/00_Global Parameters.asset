@@ -21,7 +21,7 @@ MonoBehaviour:
   enableDayAndNightCycle: 0
   dayLengthInSeconds: 20
   dayInitialRatio: 0.2
-  initialBuilding: {fileID: 11400000, guid: 5c2ccb27116004dc1acffa053dc93179, type: 2}
+  initialBuilding: {fileID: 11400000, guid: b82a9cefdc0695045baeaa66e08508d0, type: 2}
   experienceEvolutionCurve:
     serializedVersion: 2
     m_Curve:

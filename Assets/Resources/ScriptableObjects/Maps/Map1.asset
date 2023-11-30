@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f58dab08efb344ee1b100084e8ea9b0d, type: 3}
   m_Name: Map1
   m_EditorClassIdentifier: 
-  mapName: The Hills
+  mapName: mapa 1
   mapSize: 200
-  maxPlayers: 2
+  maxPlayers: 8
   sceneName: Map1

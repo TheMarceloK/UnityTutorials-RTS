@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 400d70422732246869e2f032d9ebfc9f, type: 3}
+  m_Name: "Comida_Cors\xE1riocas"
+  m_EditorClassIdentifier: 
+  code: "comida_cors\xE1riocas"
+  unitName: "Comida Cors\xE1riocas"
+  description: "Estrutura Principal. Usada para receber recursos coletados. Pode
+    usar a habilidade [nome da habilidade] para produzir construtores gratuitos tempor\xE1rios"
+  healthpoints: 500
+  prefab: {fileID: 4893885829384556338, guid: be10cef9a8bb0574799ee68fd1c4080f, type: 3}
+  sprite: {fileID: 0}
+  cost:
+  - code: 0
+    amount: 400
+  canProduce: 00000000
+  skills:
+  - {fileID: 11400000, guid: 1f47e9de111ddb44eab3bac2195a0cad, type: 2}
+  - {fileID: 11400000, guid: 73a3a09c2ff1ece48bd134e6c9839c40, type: 2}
+  - {fileID: 11400000, guid: f3c25e408f2d26e4f83eb8b8d3ae7ce9, type: 2}
+  - {fileID: 11400000, guid: a23f5b8f6bf717f4b809bb73cd6e915e, type: 2}
+  - {fileID: 11400000, guid: 121f50cf6e9d63f4c8df14c0f8c6a39a, type: 2}
+  - {fileID: 11400000, guid: f216ccd0d9cf4b743affe43ad3918c19, type: 2}
+  - {fileID: 11400000, guid: d210bdcd829fb654ba3a96c9dbf19aeb, type: 2}
+  fieldOfView: 40
+  attackRange: 0
+  attackDamage: 0
+  attackRate: 0
+  onSelectSound: {fileID: 0}
+  ambientSound: {fileID: 0}
+  constructionMeshes:
+  - {fileID: -4252228335409972894, guid: 668c78909037a4025b3debb3acdb213e, type: 3}
+  - {fileID: -7756893256904936357, guid: 63fd3fecfe08747c7a08d9c990b44b0f, type: 3}
+  - {fileID: 4493585093827132993, guid: 980dd45cb281a6f4498da17805df5f57, type: 3}

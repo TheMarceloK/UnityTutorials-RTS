@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public enum BuildingPlacement
 {
@@ -25,6 +26,7 @@ public class Building : Unit
     private AudioClip _ambientSound;
 
     private bool _isAlive;
+    
 
     public Building(BuildingData data, int owner) : this(data, owner, new List<ResourceValue>() { }) { }
     public Building(BuildingData data, int owner, List<ResourceValue> production) :
@@ -38,6 +40,7 @@ public class Building : Unit
         _constructors = new List<CharacterManager>();
         _smokeVfx = new List<Transform>();
         _isAlive = false;
+        _buildingManager.GetComponent<NavMeshObstacle>().enabled = false;
 
         _materials = new List<Material>();
         foreach (Material material in _buildingManager.meshRenderer.materials)
@@ -107,7 +110,7 @@ public class Building : Unit
 
         _constructionHP = constructionHP;
         float constructionRatio = _constructionHP / (float) MaxHP;
-
+        _buildingManager.GetComponent<NavMeshObstacle>().enabled = false;
         int meshIndex = Mathf.Max(
             0,
             (int)(_constructionMeshes.Length * constructionRatio) - 1);
@@ -168,6 +171,7 @@ public class Building : Unit
     {
         _isAlive = true;
         _bt.enabled = true;
+        _buildingManager.GetComponent<NavMeshObstacle>().enabled = true;
         ComputeProduction();
         Globals.UpdateNavMeshSurface();
 

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a57a855255a4545a0014b6b052d14c, type: 3}
+  m_Name: ConstruirProdutoraDanabas
+  m_EditorClassIdentifier: 
+  code: construir_produtora_danabas
+  skillName: Construir produtora Danabas
+  description: Constroi a produtora dos Danabas
+  type: 1
+  unitReference: {fileID: 11400000, guid: 287fda5ab84bed1419e2e36d1bd615f9, type: 2}
+  castTime: 0
+  cooldown: 0
+  sprite: {fileID: 0}
+  onStartSound: {fileID: 0}
+  onEndSound: {fileID: 0}

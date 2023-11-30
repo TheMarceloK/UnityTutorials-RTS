@@ -4,6 +4,7 @@ using UnityEngine;
 public abstract class GameParameters : BinarySerializableScriptableObject
 {
     public abstract string GetParametersName();
+    //public abstract string GetParametersFacção();
 
     [SerializeField]
     protected List<string> _fieldsToShowInGame;

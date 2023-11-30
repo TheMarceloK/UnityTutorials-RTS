@@ -1,3 +1,4 @@
+ #if UNITY_EDITOR
 using UnityEngine;
 using UnityEditor;
 using UnityEngine.SceneManagement;
@@ -42,7 +43,7 @@ public static class MapMetadataExtractor
             data = ScriptableObject.CreateInstance<MapData>();
             AssetDatabase.CreateAsset(data, assetPath);
             data.mapName = sceneName;
-            data.sceneName = sceneName;
+            data.mapName = sceneName;
         }
 
         // get the map size
@@ -57,3 +58,4 @@ public static class MapMetadataExtractor
         AssetDatabase.SaveAssets();
     }
 }
+# endif

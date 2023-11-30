@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 400d70422732246869e2f032d9ebfc9f, type: 3}
+  m_Name: Comida_Danabas
+  m_EditorClassIdentifier: 
+  code: nexus_danabas
+  unitName: Nexus Danabas
+  description: "Estrutura Principal. Usada para receber recursos coletados. Pode
+    usar a habilidade [nome da habilidade] para produzir construtores gratuitos tempor\xE1rios"
+  healthpoints: 500
+  prefab: {fileID: 9086043651083253873, guid: 67aed280d9a3513489622b5945f5bfc2, type: 3}
+  sprite: {fileID: 0}
+  cost:
+  - code: 0
+    amount: 400
+  canProduce: 00000000
+  skills:
+  - {fileID: 11400000, guid: ec00e33a40c434f6b97b314d4e96576c, type: 2}
+  fieldOfView: 40
+  attackRange: 0
+  attackDamage: 0
+  attackRate: 0
+  onSelectSound: {fileID: 0}
+  ambientSound: {fileID: 0}
+  constructionMeshes:
+  - {fileID: 4493585093827132993, guid: 5d23437c9bbd9ac44a82945ad373267a, type: 3}
+  - {fileID: 4493585093827132993, guid: 5d23437c9bbd9ac44a82945ad373267a, type: 3}
+  - {fileID: 4493585093827132993, guid: 5d23437c9bbd9ac44a82945ad373267a, type: 3}

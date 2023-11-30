@@ -4,7 +4,8 @@ using UnityEngine.AI;
 public enum SkillType
 {
     INSTANTIATE_CHARACTER,
-    INSTANTIATE_BUILDING
+    INSTANTIATE_BUILDING,
+    COLECT_RESOURCES
 }
 
 [CreateAssetMenu(fileName = "Skill", menuName = "Scriptable Objects/Skill", order = 4)]
@@ -50,6 +51,16 @@ public class SkillData : ScriptableObject
                         return;
                     BuildingPlacer.instance.SelectPlacedBuilding(
                         (BuildingData) unitReference, sourceUnitManager);
+                }
+                break;
+            case SkillType.COLECT_RESOURCES:
+                {
+                    UnitManager sourceUnitManager = source.GetComponent<UnitManager>();
+                    if (sourceUnitManager == null)
+                        return;
+                    BuildingPlacer.instance.SelectPlacedBuilding(
+                        (BuildingData)unitReference, sourceUnitManager);
+
                 }
                 break;
             default:
