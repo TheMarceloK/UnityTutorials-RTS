@@ -66,7 +66,8 @@ public class CheckUnitInRange : Node
 
                 if (buildPower > 0)
                 {
-                    if (u is Building b && !b.IsAlive)
+                    
+                    if (u is Building b && !b.IsAlive && !b.HasConstructorsFull)
                     {
                         if (!cm.IsConstructor)
                         {
