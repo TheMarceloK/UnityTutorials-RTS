@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657713, g: 0.49641252, b: 0.5748159, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657683, g: 0.49641174, b: 0.57481533, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2531,7 +2531,7 @@ PrefabInstance:
     - target: {fileID: 2081623060435600932, guid: 1fcc2c1dbcb70594cb4bfc0213272a57,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2081623060435600932, guid: 1fcc2c1dbcb70594cb4bfc0213272a57,
         type: 3}
@@ -3856,10 +3856,7 @@ MonoBehaviour:
   newGameDetailInfoText: {fileID: 0}
   newGamePlayersList: {fileID: 0}
   startGameButton: {fileID: 0}
-  loadGameScrollview: {fileID: 0}
-  loadGameDetailMapCapture: {fileID: 0}
-  loadGameDetailInfoText: {fileID: 0}
-  loadGameButton: {fileID: 0}
+  _selectedMap: {fileID: 0}
 --- !u!4 &1528717182
 Transform:
   m_ObjectHideFlags: 0
@@ -5653,7 +5650,7 @@ PrefabInstance:
     - target: {fileID: 388254600350552327, guid: f8cef32f807ccff47bc27a006e951904,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 388254600350552327, guid: f8cef32f807ccff47bc27a006e951904,
         type: 3}

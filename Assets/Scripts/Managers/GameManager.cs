@@ -141,8 +141,8 @@ public class GameManager : MonoBehaviour
 
     private void OnApplicationQuit()
     {
-#if !UNITY_EDITOR
-        DataHandler.SaveGameData();
-#endif
+//#if !UNITY_EDITOR
+//        DataHandler.SaveGameData();
+//#endif
     }
 }

@@ -5,6 +5,7 @@ using Photon.Pun;
 using TMPro;
 using Photon.Realtime;
 using System.Linq;
+using ExitGames.Client.Photon;
 
 public class Laucher : MonoBehaviourPunCallbacks
 {
@@ -38,11 +39,12 @@ public class Laucher : MonoBehaviourPunCallbacks
     private void Awake()
     {
         Instance = this;
+        PhotonNetwork.ConnectUsingSettings();
     }
 
     void Start()
     {
-        PhotonNetwork.ConnectUsingSettings();
+        //PhotonNetwork.ConnectUsingSettings();
     }
 
     private void Update()
@@ -74,10 +76,9 @@ public class Laucher : MonoBehaviourPunCallbacks
         Debug.Log(roomNameInputField.text);
     }
 
-    public void StartGame()
+    public void StartGame(string s)
     {
-        PhotonNetwork.LoadLevel(2);
-        
+        PhotonNetwork.LoadLevel(s);
     }
 
     public override void OnJoinedRoom()

@@ -28,6 +28,7 @@ public class CoreDataHandler : MonoBehaviour
     //{
     //    _gameUID = uid;
     //}
+    
 
     public void SetMapData(MapData d)
     {

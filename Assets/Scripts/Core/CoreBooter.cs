@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class CoreBooter : MonoBehaviour
 {
     public static CoreBooter instance;
-    public Laucher launcher;
+    //public Laucher launcher;
 
     public UnityEngine.UI.Image sceneTransitioner;
 
@@ -16,7 +16,9 @@ public class CoreBooter : MonoBehaviour
     {
         if (instance == null)
             instance = this;
+        DontDestroyOnLoad(this);
     }
+    
 
     private void OnEnable()
     {
@@ -41,6 +43,7 @@ public class CoreBooter : MonoBehaviour
     public void LoadMenu() => StartCoroutine(_SwitchingScene("menu"));
     public void LoadMap(string mapReference)
     {
+        
         MapData d = Resources.Load<MapData>($"ScriptableObjects/Maps/{mapReference}");
         CoreDataHandler.instance.SetMapData(d);
         string s = d.sceneName;
@@ -81,13 +84,16 @@ public class CoreBooter : MonoBehaviour
 
     private AsyncOperation _LoadMap(string map)
     {
+       
         AsyncOperation op = SceneManager.LoadSceneAsync(map, LoadSceneMode.Additive);
         AudioListener prevListener = Object.FindObjectOfType<AudioListener>();
         op.completed += (_) =>
         {
             if (prevListener != null) prevListener.enabled = false;
-            SceneManager.SetActiveScene(SceneManager.GetSceneByName(map));
-            Scene s = SceneManager.GetSceneByName("MainMenu");
+            Laucher launcher = Object.FindObjectOfType<Laucher>();
+            launcher.StartGame(map);
+            //SceneManager.SetActiveScene(SceneManager.GetSceneByName(map));
+            Scene s = SceneManager.GetSceneByName("MainMenu teste 1");
             if (s != null && s.IsValid())
                 SceneManager.LoadSceneAsync("GameScene", LoadSceneMode.Additive).completed += (_) =>
                 {
@@ -103,7 +109,7 @@ public class CoreBooter : MonoBehaviour
     {
         AudioListener prevListener = Object.FindObjectOfType<AudioListener>();
         if (prevListener != null) prevListener.enabled = false;
-        AsyncOperation op = SceneManager.LoadSceneAsync("MainMenu", LoadSceneMode.Additive);
+        AsyncOperation op = SceneManager.LoadSceneAsync("MainMenu teste 1", LoadSceneMode.Additive);
         op.completed += (_) =>
         {
             Scene s = SceneManager.GetSceneByName("GameScene");
@@ -116,7 +122,7 @@ public class CoreBooter : MonoBehaviour
                     SceneManager.UnloadSceneAsync(s);
             }
 
-            SceneManager.SetActiveScene(SceneManager.GetSceneByName("MainMenu"));
+            SceneManager.SetActiveScene(SceneManager.GetSceneByName("MainMenu teste 1"));
         };
         return op;
     }
