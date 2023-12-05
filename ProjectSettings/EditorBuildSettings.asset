@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Core.unity
     guid: 53b3e4059966448ff8ec31821492814a
   - enabled: 1
+    path: Assets/Scenes/MainMenu teste 1.unity
+    guid: 96808261cff7fae4e9455e873458f8d4
+  - enabled: 0
     path: Assets/Scenes/MainMenu.unity
     guid: 1b677854470740c46a39f68e38e72945
   - enabled: 1
@@ -23,6 +26,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Maps/Map2.unity
     guid: 700c4b9ca8fd840d48641ca51487f50b
+  - enabled: 1
+    path: Assets/Scenes/Maps/Map2 1.unity
+    guid: 895cc94cd3935dc4bb106c4fc38eeab4
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: dfc3f0b23d22e4058b4cd9eedeffd8c2,
       type: 2}

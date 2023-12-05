@@ -43,7 +43,7 @@ public static class MapMetadataExtractor
             data = ScriptableObject.CreateInstance<MapData>();
             AssetDatabase.CreateAsset(data, assetPath);
             data.mapName = sceneName;
-            data.mapName = sceneName;
+            data.sceneName = sceneName;
         }
 
         // get the map size
