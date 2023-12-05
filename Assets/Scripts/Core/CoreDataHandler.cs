@@ -6,10 +6,10 @@ public class CoreDataHandler : MonoBehaviour
 {
     public static CoreDataHandler instance;
 
-    private string _gameUID;
-    private MapData _mapData;
+    //private string _gameUID;
+    public MapData _mapData;
 
-    public string GameUID => _gameUID;
+    //public string GameUID => _gameUID;
     public string Scene => _mapData != null ? _mapData.sceneName : null;
     public float MapSize => _mapData.mapSize;
 
@@ -19,14 +19,15 @@ public class CoreDataHandler : MonoBehaviour
             instance = this;
     }
 
-    public void SetGameUID(MapData d)
-    {
-        _gameUID = $"{d.sceneName}__{System.Guid.NewGuid().ToString()}";
-    }
-    public void SetGameUID(string uid)
-    {
-        _gameUID = uid;
-    }
+    //public void SetGameUID(MapData d)
+    //{
+    //    _gameUID = $"{d.sceneName}__{System.Guid.NewGuid().ToString()}";
+    //    //_gameUID = "Map1__{System.Guid.NewGuid().ToString()}";
+    //}
+    //public void SetGameUID(string uid)
+    //{
+    //    _gameUID = uid;
+    //}
 
     public void SetMapData(MapData d)
     {

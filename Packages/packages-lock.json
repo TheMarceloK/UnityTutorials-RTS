@@ -37,7 +37,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.visualstudio": {
-      "version": "2.0.11",
+      "version": "2.0.22",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -46,7 +46,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.vscode": {
-      "version": "1.2.3",
+      "version": "1.2.5",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
@@ -60,7 +60,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.memoryprofiler": {
-      "version": "0.2.10-preview.1",
+      "version": "0.7.1-preview.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {

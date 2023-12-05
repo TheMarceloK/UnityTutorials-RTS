@@ -20,14 +20,14 @@ public class DataHandler : MonoBehaviour
             Globals.CHARACTER_DATA[d.code] = d;
 
         // load game parameters
-        string gameUid = CoreDataHandler.instance.GameUID;
+        //string gameUid = CoreDataHandler.instance.GameUID;
 
         GameParameters[] gameParametersList = Resources.LoadAll<GameParameters>("ScriptableObjects/Parameters");
         foreach (GameParameters parameters in gameParametersList)
         {
-            if (parameters is GamePlayersParameters pp)
-                pp.LoadFromFile($"Games/{gameUid}/PlayerParameters");
-            else
+            //if (parameters is GamePlayersParameters pp)
+            //    pp.LoadFromFile($"Games/{gameUid}/PlayerParameters");
+            //else
                 parameters.LoadFromFile();
         }
 
@@ -35,30 +35,30 @@ public class DataHandler : MonoBehaviour
         TechnologyNodeData.LoadTechnologyTree();
 
         // load game scene data
-        GameData.gameUid = gameUid;
-        GameData.Load();
+        //GameData.gameUid = gameUid;
+        //GameData.Load();
     }
 
-    public static void SaveGameData()
-    {
-        // save game parameters
-        GameParameters[] gameParametersList = Resources.LoadAll<GameParameters>("ScriptableObjects/Parameters");
-        foreach (GameParameters parameters in gameParametersList)
-            parameters.SaveToFile();
+    //public static void SaveGameData()
+    //{
+    //    // save game parameters
+    //    GameParameters[] gameParametersList = Resources.LoadAll<GameParameters>("ScriptableObjects/Parameters");
+    //    foreach (GameParameters parameters in gameParametersList)
+    //        parameters.SaveToFile();
 
-        // save game scene data
-        GameData.gameUid = CoreDataHandler.instance.GameUID;
-        GameData.Save(SerializeGameData());
-        // save game scene current minimap
-        Camera minimapCamera = GameObject.Find("CameraMinimap").GetComponent<Camera>();
-        MinimapManager.IS_ENABLED = false;
-        MinimapCapture.TakeScreenshot(
-            "minimap",
-            new Vector2Int(512, 512),
-            minimapCamera,
-            GameData.GetFolderPath());
-        MinimapManager.IS_ENABLED = true;
-    }
+    //    // save game scene data
+    //    //GameData.gameUid = CoreDataHandler.instance.GameUID;
+    //    GameData.Save(SerializeGameData());
+    //    // save game scene current minimap
+    //    Camera minimapCamera = GameObject.Find("CameraMinimap").GetComponent<Camera>();
+    //    MinimapManager.IS_ENABLED = false;
+    //    MinimapCapture.TakeScreenshot(
+    //        "minimap",
+    //        new Vector2Int(512, 512),
+    //        minimapCamera,
+    //        GameData.GetFolderPath());
+    //    MinimapManager.IS_ENABLED = true;
+    //}
 
     public static void DeserializeGameData()
     {

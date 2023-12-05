@@ -265,15 +265,15 @@ public class UIManager : MonoBehaviour
         _OnUpdatedUnitFormationType();
     }
 
-    public void LoadGame()
-    {
+    //public void LoadGame()
+    //{
 
-    }
+    //}
 
-    public void SaveGame()
-    {
-        DataHandler.SaveGameData();
-    }
+    //public void SaveGame()
+    //{
+    //    DataHandler.SaveGameData();
+    //}
 
     public void ResumeGame()
     {
@@ -281,11 +281,11 @@ public class UIManager : MonoBehaviour
         EventManager.TriggerEvent("ResumedGame");
     }
 
-    public void QuitGame()
-    {
-        SaveGame();
-        CoreBooter.instance.LoadMenu();
-    }
+    //public void QuitGame()
+    //{
+    //    SaveGame();
+    //    CoreBooter.instance.LoadMenu();
+    //}
 
     private void _AddUnitSkillButtonListener(Button b, int i)
     {

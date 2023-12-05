@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class CoreBooter : MonoBehaviour
 {
     public static CoreBooter instance;
+    public Laucher launcher;
 
     public UnityEngine.UI.Image sceneTransitioner;
 
@@ -86,7 +87,7 @@ public class CoreBooter : MonoBehaviour
         {
             if (prevListener != null) prevListener.enabled = false;
             SceneManager.SetActiveScene(SceneManager.GetSceneByName(map));
-            Scene s = SceneManager.GetSceneByName("MainMenu teste 1");
+            Scene s = SceneManager.GetSceneByName("MainMenu");
             if (s != null && s.IsValid())
                 SceneManager.LoadSceneAsync("GameScene", LoadSceneMode.Additive).completed += (_) =>
                 {
@@ -102,7 +103,7 @@ public class CoreBooter : MonoBehaviour
     {
         AudioListener prevListener = Object.FindObjectOfType<AudioListener>();
         if (prevListener != null) prevListener.enabled = false;
-        AsyncOperation op = SceneManager.LoadSceneAsync("MainMenu teste 1", LoadSceneMode.Additive);
+        AsyncOperation op = SceneManager.LoadSceneAsync("MainMenu", LoadSceneMode.Additive);
         op.completed += (_) =>
         {
             Scene s = SceneManager.GetSceneByName("GameScene");
@@ -115,7 +116,7 @@ public class CoreBooter : MonoBehaviour
                     SceneManager.UnloadSceneAsync(s);
             }
 
-            SceneManager.SetActiveScene(SceneManager.GetSceneByName("MainMenu teste 1"));
+            SceneManager.SetActiveScene(SceneManager.GetSceneByName("MainMenu"));
         };
         return op;
     }
