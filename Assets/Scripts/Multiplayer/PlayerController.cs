@@ -6,24 +6,24 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
-    GameObject cameraHolder;
+    //GameObject cameraHolder;
 
-    [SerializeField]
-    float mouseSensitivity, sprintSpeed, walkSpeed, jumpForce, smoothTime;
+    //[SerializeField]
+    //float mouseSensitivity, sprintSpeed, walkSpeed, jumpForce, smoothTime;
 
-    float verticalLockRotation;
-    bool grounded;
-    Vector3 smoothMoveVelocity;
-    Vector3 moveAmount;
+    //float verticalLockRotation;
+    //bool grounded;
+    //Vector3 smoothMoveVelocity;
+    //Vector3 moveAmount;
 
 
-    Rigidbody rb;
+    //Rigidbody rb;
 
     PhotonView PV;
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody>();
+       // rb = GetComponent<Rigidbody>();
         PV = GetComponent<PhotonView>();
     }
 
@@ -31,53 +31,53 @@ public class PlayerController : MonoBehaviour
     {
         if(!PV.IsMine)
         {
-            Destroy(GetComponentInChildren<Camera>().gameObject);
-            Destroy(rb);
+            Destroy(GetComponent<Camera>().gameObject);
+            //Destroy(rb);
         }
     }
 
     private void Update()
     {
         if(!PV.IsMine) return;
-        Look();
-        Move();
-        Jump();
+        //Look();
+        //Move();
+        //Jump();
      
     }
 
-    void Look()
-    {
-        transform.Rotate(Vector3.up * Input.GetAxisRaw("Mouse X") * mouseSensitivity);
+    //void Look()
+    //{
+    //    transform.Rotate(Vector3.up * Input.GetAxisRaw("Mouse X") * mouseSensitivity);
 
-        verticalLockRotation += Input.GetAxisRaw("Mouse Y") * mouseSensitivity;
-        verticalLockRotation = Mathf.Clamp(verticalLockRotation, -90f, 90f);
+    //    verticalLockRotation += Input.GetAxisRaw("Mouse Y") * mouseSensitivity;
+    //    verticalLockRotation = Mathf.Clamp(verticalLockRotation, -90f, 90f);
 
-        cameraHolder.transform.localEulerAngles = Vector3.left * verticalLockRotation;
-    }
+    //    cameraHolder.transform.localEulerAngles = Vector3.left * verticalLockRotation;
+    //}
 
-    void Move()
-    {
-        Vector3 moveDir = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
+    //void Move()
+    //{
+    //    Vector3 moveDir = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
 
-        moveAmount = Vector3.SmoothDamp(moveAmount, moveDir * (Input.GetKey(KeyCode.LeftShift) ? sprintSpeed : walkSpeed), ref smoothMoveVelocity, smoothTime);
-    }
+    //    moveAmount = Vector3.SmoothDamp(moveAmount, moveDir * (Input.GetKey(KeyCode.LeftShift) ? sprintSpeed : walkSpeed), ref smoothMoveVelocity, smoothTime);
+    //}
 
-    void Jump()
-    {
-        if (Input.GetKey(KeyCode.Space) && grounded)
-        {
-            rb.AddForce(transform.up * jumpForce);
-        }
-    }
+    //void Jump()
+    //{
+    //    if (Input.GetKey(KeyCode.Space) && grounded)
+    //    {
+    //        rb.AddForce(transform.up * jumpForce);
+    //    }
+    //}
 
-    public void SetGroundedState(bool _grounded)
-    {
-        grounded = _grounded;
-    }
+    //public void SetGroundedState(bool _grounded)
+    //{
+    //    grounded = _grounded;
+    //}
 
     private void FixedUpdate()
     {
         if (!PV.IsMine) return;
-        rb.MovePosition(rb.position + transform.TransformDirection(moveAmount) * Time.fixedDeltaTime);
+        //rb.MovePosition(rb.position + transform.TransformDirection(moveAmount) * Time.fixedDeltaTime);
     }
 }
