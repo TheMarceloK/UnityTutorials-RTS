@@ -16,6 +16,8 @@ public class BuildingPlacer : MonoBehaviour
 
     private void Start()
     {
+
+        Debug.Log("Game manager awake");
         instance = this;
 
         // if no previous game data, spawn initial buildings
@@ -28,10 +30,13 @@ public class BuildingPlacer : MonoBehaviour
             Vector3 pos;
             for (int i = 0; i < p.players.Length; i++)
             {
+
+                Debug.Log(Camera.main);
                 pos = spawnpoints.GetChild(i).position;
                 SpawnBuilding(initialBuilding, i, pos);
                 if (i == p.myPlayerId)
                     Camera.main.GetComponent<CameraManager>().SetPosition(pos);
+                
             }
         }
     }

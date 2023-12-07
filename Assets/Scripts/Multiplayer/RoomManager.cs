@@ -9,9 +9,11 @@ public class RoomManager : MonoBehaviourPunCallbacks
 {
 
     public static RoomManager Instance;
+    BuildingPlacer buildingPlacer;
 
     private void Awake()
     {
+        
         if (Instance)
         {
             Destroy(gameObject);
@@ -39,7 +41,9 @@ public class RoomManager : MonoBehaviourPunCallbacks
         Debug.Log($"{scene} carregada como {scene.buildIndex}");
         if(scene.buildIndex == 2)
         {
+            buildingPlacer = FindObjectOfType<BuildingPlacer>();
             PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs","PlayerManager"), Vector3.zero, Quaternion.identity);
+            
         }
     }
 }

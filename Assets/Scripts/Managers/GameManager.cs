@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        Debug.Log("Game manager awake");
         canvasScaleFactor = canvas.scaleFactor;
 
         DataHandler.LoadGameData();
@@ -60,6 +61,8 @@ public class GameManager : MonoBehaviour
     public void Start()
     {
         instance = this;
+
+        Debug.Log("Game manager start");
     }
 
     private void _SetupMinimap()

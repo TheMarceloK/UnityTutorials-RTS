@@ -39,6 +39,8 @@ public class CameraManager : MonoBehaviour
         _mouseOnScreenCoroutine = null;
         _mouseOnScreenBorder = -1;
         _placingBuilding = false;
+
+        Debug.Log("Camera existe");
     }
 
     void Update()

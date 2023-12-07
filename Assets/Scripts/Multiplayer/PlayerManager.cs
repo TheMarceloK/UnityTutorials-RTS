@@ -11,19 +11,27 @@ public class PlayerManager : MonoBehaviour
 
     private void Awake()
     {
-        PV = GetComponent<PhotonView>();    
-    }
+        PV = GetComponent<PhotonView>();
 
-    void Start()
-    {
-        if(PV.IsMine)
+        Debug.Log("Player Manager awake");
+        if (PV.IsMine)
         {
             CreateController();
         }
     }
 
+    void Start()
+    {
+        //if(PV.IsMine)
+        //{
+        //    CreateController();
+        //}
+    }
+
     void CreateController()
     {
-        //PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "RTS Camera"), new Vector3(100, 40, 50), Quaternion.identity);
+
+        Debug.Log("CreateController");
+        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "RTS Camera"), new Vector3(100, 40, 50), Quaternion.Euler(new Vector3(30,0,0)));
     }
 }

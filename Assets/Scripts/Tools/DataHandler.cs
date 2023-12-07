@@ -8,7 +8,7 @@ public class DataHandler : MonoBehaviour
 {
     public void Start()
     {
-        DeserializeGameData();
+        //DeserializeGameData();
     }
 
     public static void LoadGameData()
