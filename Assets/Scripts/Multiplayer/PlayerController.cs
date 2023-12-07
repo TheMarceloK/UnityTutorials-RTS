@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        if(!PV.IsMine)
+        if(!PV.IsMine && gameObject.tag=="MainCamera")
         {
             Destroy(GetComponent<Camera>().gameObject);
             //Destroy(rb);
