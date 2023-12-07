@@ -67,6 +67,8 @@ GameObject:
   - component: {fileID: -6208521377285542270}
   - component: {fileID: -2194822987851611251}
   - component: {fileID: -2031709788381366338}
+  - component: {fileID: 2844977545291250396}
+  - component: {fileID: 2098154806766166388}
   m_Layer: 12
   m_Name: House
   m_TagString: Unit
@@ -404,6 +406,41 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2844977545291250396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4893885829384556338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &2098154806766166388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4893885829384556338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b21672d23f978b04c8431ad167b4678e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PV: {fileID: 2844977545291250396}
 --- !u!1001 &6223790313440049267
 PrefabInstance:
   m_ObjectHideFlags: 0
