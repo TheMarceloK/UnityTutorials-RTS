@@ -13871,7 +13871,8 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 0}
+    - target: {fileID: -5131290684076681527, guid: 75a25cfd90946bd43b90e5d78b005dd8,
+        type: 3}
       propertyPath: sceneViewId
       value: 1
       objectReference: {fileID: 0}
@@ -13929,6 +13930,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966030919971709395, guid: 75a25cfd90946bd43b90e5d78b005dd8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7966030919971709399, guid: 75a25cfd90946bd43b90e5d78b005dd8,
         type: 3}

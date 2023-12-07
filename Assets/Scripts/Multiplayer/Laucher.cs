@@ -44,6 +44,7 @@ public class Laucher : MonoBehaviourPunCallbacks
 
     void Start()
     {
+        EventManager.TriggerEvent("LoadedScene");
         //PhotonNetwork.ConnectUsingSettings();
     }
 
