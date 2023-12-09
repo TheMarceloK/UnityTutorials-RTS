@@ -25,11 +25,12 @@ public class PlayerController : MonoBehaviour
     {
        // rb = GetComponent<Rigidbody>();
         PV = GetComponent<PhotonView>();
+        Debug.Log(PV.Controller.NickName);
     }
 
     private void Start()
     {
-        if(!PV.IsMine && gameObject.tag=="MainCamera")
+        if (!PV.IsMine && gameObject.tag == "MainCamera")
         {
             Destroy(GetComponent<Camera>().gameObject);
             //Destroy(rb);

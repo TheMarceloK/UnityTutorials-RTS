@@ -56,7 +56,7 @@ public class Unit
             data.attackDamage *
             TechnologyNodeActioners.GetMultiplier("attack_booster"));
         _attackRange = data.attackRange;
-
+        
         GameObject g = GameObject.Instantiate(data.prefab) as GameObject;
         _transform = g.transform;
         _transform.GetComponent<UnitManager>().SetOwnerMaterial(owner);

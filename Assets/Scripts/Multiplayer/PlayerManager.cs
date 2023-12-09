@@ -30,8 +30,10 @@ public class PlayerManager : MonoBehaviour
 
     void CreateController()
     {
-
         Debug.Log("CreateController");
         PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "RTS Camera"), new Vector3(100, 40, 50), Quaternion.Euler(new Vector3(30,0,0)));
     }
+
+    // inserir aqui todas as chamadas que o jogador faça.
+
 }
