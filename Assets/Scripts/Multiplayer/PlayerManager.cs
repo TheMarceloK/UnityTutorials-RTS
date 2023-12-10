@@ -10,12 +10,15 @@ public class PlayerManager : MonoBehaviour
 
     PhotonView PV;
     private Dictionary<int, PlayerData> _playersData;
-
+    public GamePlayersParameters _playersParameters;
     private void Awake()
     {
-        Debug.Log("awake");
-        
         PV = GetComponent<PhotonView>();
+        Debug.Log("awake");
+        _playersParameters.myPlayerId = PV.Controller.ActorNumber;
+        Debug.Log(PV.Controller.ActorNumber);
+        Debug.Log(_playersParameters.myPlayerId);
+        
         Debug.Log($"P = {_playersData}");
         Debug.Log(PV.Controller.NickName);
         Debug.Log(PV.Controller.ActorNumber);

@@ -66,3 +66,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f61ef9c25ac97344931875c582ff2fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playersParameters: {fileID: 11400000, guid: 43bb1c8ffec8a4e2e82c45129aca2de1, type: 2}

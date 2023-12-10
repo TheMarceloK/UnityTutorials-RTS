@@ -12,7 +12,8 @@ public class PlayerData : BinarySerializable
         )
     {
         this.name = name;
-       // this.color = color;
+        this.color = color;
+        
 //        this.facção = facção;
 
     }
@@ -27,6 +28,8 @@ public class GamePlayersParameters : GameParameters
     public override string GetParametersName() => "Players";
     //public override string GetParametersName() => "Players";
     public PlayerData[] players;
+
+    [HideInInspector]
     public int myPlayerId;
     
 }

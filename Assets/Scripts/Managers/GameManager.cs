@@ -61,7 +61,6 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
         Debug.Log($"My Player ID {gamePlayersParameters.myPlayerId}");
-        Debug.Log(gamePlayersParameters.players);
 
     }
 
@@ -81,6 +80,8 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(gamePlayersParameters.players.Length);
+
         if (Input.anyKeyDown)
         {
             if (waitingForInput)

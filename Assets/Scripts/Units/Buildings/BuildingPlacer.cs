@@ -34,7 +34,7 @@ public class BuildingPlacer : MonoBehaviour
                 pos = spawnpoints.GetChild(i).position;
                 SpawnBuilding(initialBuilding, i, pos);
                 if (i == p.myPlayerId)
-                    Camera.main.GetComponent<CameraManager>().SetPosition(pos);
+                    Camera.main.GetComponent<CameraManager>().SetPosition(pos); 
                 
             }
         }
