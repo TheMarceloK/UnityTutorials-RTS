@@ -17,7 +17,6 @@ public class BuildingPlacer : MonoBehaviour
     private void Start()
     {
 
-        Debug.Log("Game manager awake");
         instance = this;
 
         // if no previous game data, spawn initial buildings

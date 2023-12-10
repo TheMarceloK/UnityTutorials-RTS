@@ -1,6 +1,7 @@
 using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -18,23 +19,28 @@ public class PlayerController : MonoBehaviour
 
 
     //Rigidbody rb;
-
+    
+    
     PhotonView PV;
 
     private void Awake()
     {
-       // rb = GetComponent<Rigidbody>();
+
         PV = GetComponent<PhotonView>();
-        Debug.Log(PV.Controller.NickName);
+        
     }
 
     private void Start()
     {
+        // rb = GetComponent<Rigidbody>();
+       
         if (!PV.IsMine && gameObject.tag == "MainCamera")
         {
             Destroy(GetComponent<Camera>().gameObject);
             //Destroy(rb);
         }
+       
+
     }
 
     private void Update()

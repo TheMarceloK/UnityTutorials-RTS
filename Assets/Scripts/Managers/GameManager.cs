@@ -39,10 +39,9 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("Game manager awake");
         canvasScaleFactor = canvas.scaleFactor;
 
-        DataHandler.LoadGameData();
+        //DataHandler.LoadGameData();
         GetComponent<DayAndNightCycler>().enabled = gameGlobalParameters.enableDayAndNightCycle;
 
         Globals.InitializeGameResources(gamePlayersParameters.players.Length);
@@ -61,8 +60,9 @@ public class GameManager : MonoBehaviour
     public void Start()
     {
         instance = this;
+        Debug.Log($"My Player ID {gamePlayersParameters.myPlayerId}");
+        Debug.Log(gamePlayersParameters.players);
 
-        Debug.Log("Game manager start");
     }
 
     private void _SetupMinimap()

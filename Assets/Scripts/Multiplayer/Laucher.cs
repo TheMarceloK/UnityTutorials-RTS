@@ -36,10 +36,15 @@ public class Laucher : MonoBehaviourPunCallbacks
     GameObject startGameButton;
     private static Dictionary<string, RoomInfo> cachedRoomList = new Dictionary<string, RoomInfo>();
 
+    RoomManager roomManager;
+
+    public int PlayerCountNum { get => playerCountNum;}
+
     private void Awake()
     {
         Instance = this;
         PhotonNetwork.ConnectUsingSettings();
+        roomManager = FindObjectOfType<RoomManager>();
     }
 
     void Start()
@@ -74,11 +79,10 @@ public class Laucher : MonoBehaviourPunCallbacks
             return;
         }
         PhotonNetwork.CreateRoom(roomNameInputField.text);
-        Debug.Log(roomNameInputField.text);
     }
 
     public void StartGame(string s)
-    {
+    { 
         PhotonNetwork.LoadLevel(s);
     }
 
@@ -126,6 +130,10 @@ public class Laucher : MonoBehaviourPunCallbacks
         MenuManager.Instance.OpenMenu("loading");
         PhotonNetwork.JoinRoom(info.Name);
         MenuManager.Instance.OpenMenu("room");
+        Debug.Log(roomManager.photonView.ControllerActorNr);
+        Debug.Log(roomManager.photonView.CreatorActorNr);
+        Debug.Log(roomManager.photonView.name);
+        
     }
 
     public override void OnLeftRoom()

@@ -38,7 +38,6 @@ public class RoomManager : MonoBehaviourPunCallbacks
 
     void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
     {
-        Debug.Log($"{scene} carregada como {scene.buildIndex}");
         if(scene.buildIndex == 2)
         {
             buildingPlacer = FindObjectOfType<BuildingPlacer>();

@@ -12,7 +12,7 @@ public class PlayerData : BinarySerializable
         )
     {
         this.name = name;
-        this.color = color;
+       // this.color = color;
 //        this.facção = facção;
 
     }
