@@ -4,6 +4,8 @@ using UnityEngine;
 using Photon.Pun;
 using System.IO;
 using System.Linq;
+using UnityEditor.SearchService;
+
 
 public class PlayerManager : MonoBehaviour
 {
@@ -14,7 +16,7 @@ public class PlayerManager : MonoBehaviour
     private void Awake()
     {
         PV = GetComponent<PhotonView>();
-        Debug.Log("awake");
+       
 
         //_playersData[PV.Controller.ActorNumber] = new PlayerData(PV.Controller.NickName, Color.red);
 
@@ -35,16 +37,19 @@ public class PlayerManager : MonoBehaviour
 
     void Start()
     {
+        
         //if(PV.IsMine)
         //{
         //    CreateController();
         //}
-        
+
     }
 
     void CreateController()
     {
-        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "RTS Camera"), new Vector3(100, 40, 50), Quaternion.Euler(new Vector3(30,0,0)));
+        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "RTS Camera"), new Vector3(100, 40, 50), Quaternion.Euler(new Vector3(30, 0, 0)));
+        Object.FindObjectOfType<CameraManager>().InitializeBounds();
+        EventManager.TriggerEvent("LoadedScene");
     }
 
     // inserir aqui todas as chamadas que o jogador faça.

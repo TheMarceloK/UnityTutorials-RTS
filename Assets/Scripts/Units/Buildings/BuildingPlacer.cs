@@ -30,7 +30,6 @@ public class BuildingPlacer : MonoBehaviour
             for (int i = 0; i < p.players.Length; i++)
             {
 
-                Debug.Log(Camera.main);
                 pos = spawnpoints.GetChild(i).position;
                 SpawnBuilding(initialBuilding, i, pos);
                 if (i == p.myPlayerId)

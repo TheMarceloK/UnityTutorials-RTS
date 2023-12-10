@@ -39,9 +39,10 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        instance = this;
+
         gamePlayersParameters = RoomManager.instance.gamePlayersParameters;
-        Debug.Log(gamePlayersParameters);
-        Debug.Log(gamePlayersParameters.players.Length);
+        
         canvasScaleFactor = canvas.scaleFactor;
 
         //DataHandler.LoadGameData();
@@ -62,8 +63,7 @@ public class GameManager : MonoBehaviour
 
     public void Start()
     {
-        instance = this;
-        Debug.Log($"My Player ID {gamePlayersParameters.myPlayerId}");
+        
 
     }
 
@@ -72,13 +72,18 @@ public class GameManager : MonoBehaviour
         Bounds b = GameObject.Find("Terrain").GetComponent<Terrain>().terrainData.bounds;
 
         terrainSize = (int) b.size.x;
+       
         float p = terrainSize / 2;
 
+        Debug.Log(terrainSize);
         minimapAnchor.position = new Vector3(p, 0, p);
+        Debug.Log(minimapAnchor);
         minimapCamera.orthographicSize = p;
+        Debug.Log(minimapCamera.orthographicSize);
         mapWrapperCollider.center = new Vector3(0, _TERRAIN_MID_HEIGHT, 0);
         mapWrapperCollider.size = new Vector3(b.size.x, 1f, b.size.z);
         minimapScript.terrainSize = Vector2.one * terrainSize;
+        
     }
 
     private void Update()

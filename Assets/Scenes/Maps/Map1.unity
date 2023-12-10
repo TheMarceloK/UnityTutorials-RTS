@@ -8818,7 +8818,7 @@ MonoBehaviour:
   minimapCamera: {fileID: 1039973280}
   minimapScript: {fileID: 1909154646}
   mapWrapperCollider: {fileID: 1466245625}
-  terrainSize: 200
+  terrainSize: 1000
   gameIsPaused: 0
   producingRate: 3
   waitingForInput: 0

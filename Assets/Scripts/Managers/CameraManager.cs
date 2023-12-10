@@ -34,12 +34,18 @@ public class CameraManager : MonoBehaviour
     private void Awake()
     {
         _camera = GetComponent<Camera>();
-
+        
         _forwardDir = Vector3.ProjectOnPlane(transform.forward, Vector3.up).normalized;
         _mouseOnScreenCoroutine = null;
         _mouseOnScreenBorder = -1;
         _placingBuilding = false;
-
+       
+    }
+    private void Start()
+    {
+    //se tirar isso, dá ruim na camera
+        _Zoom(1);
+        _Zoom(-1);
     }
 
     void Update()
@@ -64,7 +70,7 @@ public class CameraManager : MonoBehaviour
 
         // only use scroll for zoom if not currently placing a building
         if (!_placingBuilding && Math.Abs(Input.mouseScrollDelta.y) > 0f)
-            _Zoom(Input.mouseScrollDelta.y > 0f ? 1 : -1);
+            _Zoom(Input.mouseScrollDelta.y > 0f ? -1 : 1);
     }
 
     private void OnEnable()
@@ -155,6 +161,7 @@ public class CameraManager : MonoBehaviour
         if (pos.x + _camHalfViewZone.x > _maxX) pos.x = _maxX - _camHalfViewZone.x;
         if (pos.z - _camHalfViewZone.z < _minZ) pos.z = _minZ + _camHalfViewZone.z;
         if (pos.z + _camHalfViewZone.z > _maxZ) pos.z = _maxZ - _camHalfViewZone.z;
+        
         return pos;
     }
 

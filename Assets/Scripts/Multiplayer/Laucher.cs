@@ -71,11 +71,10 @@ public class Laucher : MonoBehaviourPunCallbacks
     private void Update()
     {
         PhotonNetwork.NickName = playerName.text;
-        //Debug.Log(PhotonNetwork.NickName);
-        Debug.Log(players.Length);
-        Debug.Log(_playersData.Count);
+       
+        
         playersCount.text = playerCountNum.ToString();
-        //Debug.Log(playerCountNum);
+        
         if (entrou)
         {
             for (int i = 0; i < players.Length; i++)
@@ -119,7 +118,6 @@ public class Laucher : MonoBehaviourPunCallbacks
             //.Where((KeyValuePair<int, PlayerData> p) => _activePlayers[p.Key])
             .Select((KeyValuePair<int, PlayerData> p) => p.Value)
             .ToArray();
-        Debug.Log(gamePlayersParameters.players.Length);
         RoomManager.instance.gamePlayersParameters = gamePlayersParameters;
         
     }
