@@ -39,7 +39,7 @@ public class Laucher : MonoBehaviourPunCallbacks
     GamePlayersParameters gamePlayersParameters;
     private Dictionary<int, PlayerData> _playersData;
     bool entrou = false;
-    Player[] players = PhotonNetwork.PlayerList;
+    Player[] players;
 
 
     public int PlayerCountNum { get => playerCountNum;}
