@@ -41,6 +41,17 @@ public class Laucher : MonoBehaviourPunCallbacks
     bool entrou = false;
     Player[] players ;
 
+    private static readonly Color[] _playerColors = new Color[]
+    {
+            Color.red,
+            Color.blue,
+            Color.yellow,
+            Color.green,
+            Color.cyan,
+            Color.magenta,
+            Color.white,
+            Color.gray,
+    };
 
     public int PlayerCountNum { get => playerCountNum;}
 
@@ -69,7 +80,7 @@ public class Laucher : MonoBehaviourPunCallbacks
         {
             for (int i = 0; i < players.Length; i++)
             {
-                _playersData[i] = new PlayerData(players[i].NickName, Color.red);
+                _playersData[i] = new PlayerData(players[i].NickName, _playerColors[i]);
             }
         }
     }
