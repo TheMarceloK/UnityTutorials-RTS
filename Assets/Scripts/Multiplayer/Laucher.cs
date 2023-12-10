@@ -35,8 +35,9 @@ public class Laucher : MonoBehaviourPunCallbacks
     [SerializeField]
     GameObject startGameButton;
     private static Dictionary<string, RoomInfo> cachedRoomList = new Dictionary<string, RoomInfo>();
-
-    RoomManager roomManager;
+    [SerializeField]
+    GamePlayersParameters gamePlayersParameters;
+ 
 
     public int PlayerCountNum { get => playerCountNum;}
 
@@ -44,7 +45,7 @@ public class Laucher : MonoBehaviourPunCallbacks
     {
         Instance = this;
         PhotonNetwork.ConnectUsingSettings();
-        roomManager = FindObjectOfType<RoomManager>();
+        
     }
 
     void Start()
@@ -89,6 +90,7 @@ public class Laucher : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         Debug.Log("Joined Room");
+        
         roomNameText.text = PhotonNetwork.CurrentRoom.Name;
 
         Player[] players = PhotonNetwork.PlayerList;
@@ -106,6 +108,8 @@ public class Laucher : MonoBehaviourPunCallbacks
         }
 
         startGameButton.SetActive(PhotonNetwork.IsMasterClient);
+        gamePlayersParameters.myPlayerId = playerCountNum - 1;
+        Debug.Log(gamePlayersParameters.myPlayerId);
     }
 
     public override void OnMasterClientSwitched(Player newMasterClient)
@@ -130,9 +134,6 @@ public class Laucher : MonoBehaviourPunCallbacks
         MenuManager.Instance.OpenMenu("loading");
         PhotonNetwork.JoinRoom(info.Name);
         MenuManager.Instance.OpenMenu("room");
-        Debug.Log(roomManager.photonView.ControllerActorNr);
-        Debug.Log(roomManager.photonView.CreatorActorNr);
-        Debug.Log(roomManager.photonView.name);
         
     }
 
