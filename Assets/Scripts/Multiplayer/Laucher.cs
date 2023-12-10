@@ -124,7 +124,7 @@ public class Laucher : MonoBehaviourPunCallbacks
         startGameButton.SetActive(PhotonNetwork.IsMasterClient);
         gamePlayersParameters.myPlayerId = playerCountNum - 1;
         Debug.Log(gamePlayersParameters.myPlayerId);
-        _playersData[gamePlayersParameters.myPlayerId] = new PlayerData(name, Color.red);
+        _playersData[gamePlayersParameters.myPlayerId+1] = new PlayerData(name, Color.blue);
 
 
     }
@@ -188,5 +188,7 @@ public class Laucher : MonoBehaviourPunCallbacks
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
         Instantiate(playerListPrefab, playerListContent).GetComponent<PlayerListItem>().SetUp(newPlayer);
+
+        _playersData[gamePlayersParameters.myPlayerId] = new PlayerData(name, Color.red);
     }
 }
