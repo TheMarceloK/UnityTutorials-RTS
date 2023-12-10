@@ -7,20 +7,20 @@ using System.IO;
 
 public class RoomManager : MonoBehaviourPunCallbacks
 {
-
-    public static RoomManager Instance;
+    public GamePlayersParameters gamePlayersParameters;
+    public static RoomManager instance;
     BuildingPlacer buildingPlacer;
 
     private void Awake()
     {
         
-        if (Instance)
+        if (instance)
         {
             Destroy(gameObject);
             return;
         }
         DontDestroyOnLoad(gameObject);
-        Instance = this;
+        instance = this;
     }
 
     public override void OnEnable()

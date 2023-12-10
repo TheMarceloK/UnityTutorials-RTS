@@ -39,6 +39,7 @@ public class Laucher : MonoBehaviourPunCallbacks
     GamePlayersParameters gamePlayersParameters;
     private Dictionary<int, PlayerData> _playersData;
     bool entrou = false;
+    Player[] players = PhotonNetwork.PlayerList;
 
 
     public int PlayerCountNum { get => playerCountNum;}
@@ -60,14 +61,16 @@ public class Laucher : MonoBehaviourPunCallbacks
     {
         PhotonNetwork.NickName = playerName.text;
         //Debug.Log(PhotonNetwork.NickName);
+        Debug.Log(players.Length);
         playersCount.text = playerCountNum.ToString();
-        Debug.Log(playerCountNum);
+        //Debug.Log(playerCountNum);
         if(entrou)
         {
             for (int i = 0; i < playerCountNum; i++)
             {
                 _playersData[gamePlayersParameters.myPlayerId] = new PlayerData(name, Color.red);
             }
+            
         }
         
     }
@@ -107,8 +110,8 @@ public class Laucher : MonoBehaviourPunCallbacks
             .Select((KeyValuePair<int, PlayerData> p) => p.Value)
             .ToArray();
         Debug.Log(gamePlayersParameters.players.Length);
-        CoreDataHandler.instance.gamePlayersParameters = gamePlayersParameters;
-
+        RoomManager.instance.gamePlayersParameters = gamePlayersParameters;
+        
     }
 
     public override void OnJoinedRoom()
@@ -117,9 +120,10 @@ public class Laucher : MonoBehaviourPunCallbacks
         
         roomNameText.text = PhotonNetwork.CurrentRoom.Name;
 
-        Player[] players = PhotonNetwork.PlayerList;
+        players = PhotonNetwork.PlayerList;
 
-        foreach(Transform child in playerListContent)
+
+        foreach (Transform child in playerListContent)
         {
             Destroy(child.gameObject);
         }
@@ -132,7 +136,7 @@ public class Laucher : MonoBehaviourPunCallbacks
         }
 
         startGameButton.SetActive(PhotonNetwork.IsMasterClient);
-        gamePlayersParameters.myPlayerId = playerCountNum - 1;
+        gamePlayersParameters.myPlayerId = playerCountNum -1 ;
         Debug.Log(gamePlayersParameters.myPlayerId);
 
         entrou = true;
@@ -170,6 +174,7 @@ public class Laucher : MonoBehaviourPunCallbacks
 
     public override void OnRoomListUpdate(List<RoomInfo> roomList)
     {
+        
         foreach (Transform trans in roomListContent)
         {
             Destroy(trans.gameObject);
@@ -196,6 +201,8 @@ public class Laucher : MonoBehaviourPunCallbacks
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
+        players = PhotonNetwork.PlayerList;
+        entrou = true;
         Instantiate(playerListPrefab, playerListContent).GetComponent<PlayerListItem>().SetUp(newPlayer);
     }
 }
