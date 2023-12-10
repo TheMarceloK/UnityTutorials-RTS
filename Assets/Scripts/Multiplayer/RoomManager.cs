@@ -10,6 +10,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
     public GamePlayersParameters gamePlayersParameters;
     public static RoomManager instance;
     BuildingPlacer buildingPlacer;
+    PhotonView PV;
 
     private void Awake()
     {
@@ -48,5 +49,16 @@ public class RoomManager : MonoBehaviourPunCallbacks
     // inserir aqui todas as chamadas que o jogador faça.
 
     //trigger de skill
-    
+    public void TriggerSkill(Unit caller, int index, GameObject target = null)
+    {
+        //Debug.Log(caller);
+        //caller.PV.RPC("RPCTriggerSkill", RpcTarget.All, index, target);
+        PV.RPC("teste", RpcTarget.All);
+    }
+
+    [PunRPC]
+    public void teste()
+    {
+        Debug.Log("teste");
+    }
 }
