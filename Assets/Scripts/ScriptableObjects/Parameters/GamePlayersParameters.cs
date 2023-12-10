@@ -28,7 +28,7 @@ public class GamePlayersParameters : GameParameters
     public override string GetParametersName() => "Players";
     //public override string GetParametersName() => "Players";
     public PlayerData[] players;
-    [HideInInspector]
+    
     public int myPlayerId;
     
 }

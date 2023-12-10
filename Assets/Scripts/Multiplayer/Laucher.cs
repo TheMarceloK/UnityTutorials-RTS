@@ -39,7 +39,7 @@ public class Laucher : MonoBehaviourPunCallbacks
     GamePlayersParameters gamePlayersParameters;
     private Dictionary<int, PlayerData> _playersData;
     bool entrou = false;
-    Player[] players;
+    Player[] players ;
 
 
     public int PlayerCountNum { get => playerCountNum;}
@@ -65,15 +65,13 @@ public class Laucher : MonoBehaviourPunCallbacks
         Debug.Log(_playersData.Count);
         playersCount.text = playerCountNum.ToString();
         //Debug.Log(playerCountNum);
-        if(entrou)
+        if (entrou)
         {
             for (int i = 0; i < players.Length; i++)
             {
-                _playersData[i] = new PlayerData(name, Color.red);
+                _playersData[i] = new PlayerData(players[i].NickName, Color.red);
             }
-            
         }
-        
     }
 
     public override void OnConnectedToMaster()
