@@ -92,7 +92,7 @@ public class Laucher : MonoBehaviourPunCallbacks
             .ToArray();
         Debug.Log(gamePlayersParameters.players.Length);
         PhotonNetwork.LoadLevel(s);
-        GameManager.instance.gamePlayersParameters = gamePlayersParameters;
+        CoreDataHandler.instance.gamePlayersParameters = gamePlayersParameters;
     }
 
     public override void OnJoinedRoom()

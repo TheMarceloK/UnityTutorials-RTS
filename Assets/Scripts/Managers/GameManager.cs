@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        gamePlayersParameters = CoreDataHandler.instance.gamePlayersParameters;
         canvasScaleFactor = canvas.scaleFactor;
 
         //DataHandler.LoadGameData();
