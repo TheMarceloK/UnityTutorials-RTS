@@ -2128,6 +2128,8 @@ MonoBehaviour:
   playerName: {fileID: 1516065146}
   playerCountNum: 0
   startGameButton: {fileID: 140426756}
+  gamePlayersParameters: {fileID: 11400000, guid: 43bb1c8ffec8a4e2e82c45129aca2de1,
+    type: 2}
 --- !u!114 &1445898515
 MonoBehaviour:
   m_ObjectHideFlags: 0

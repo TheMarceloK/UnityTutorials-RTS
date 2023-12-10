@@ -15,7 +15,7 @@ public class PlayerManager : MonoBehaviour
     {
         PV = GetComponent<PhotonView>();
         Debug.Log("awake");
-        _playersParameters.myPlayerId = PV.Controller.ActorNumber;
+        //_playersParameters.myPlayerId = PV.Controller.ActorNumber;
         Debug.Log(PV.Controller.ActorNumber);
         Debug.Log(_playersParameters.myPlayerId);
         
