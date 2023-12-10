@@ -168,8 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mapData: {fileID: 0}
-  gamePlayersParameters: {fileID: 11400000, guid: 43bb1c8ffec8a4e2e82c45129aca2de1,
-    type: 2}
+  gamePlayersParameters: {fileID: 0}
 --- !u!114 &32012240
 MonoBehaviour:
   m_ObjectHideFlags: 0
