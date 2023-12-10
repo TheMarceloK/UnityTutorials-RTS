@@ -238,7 +238,7 @@ public class Unit
     public void TriggerSkill(int index ,GameObject target = null)
     {
         Debug.Log(playerController);
-        RoomManager.instance.TriggerSkill(this, index, target);
+        playerController.TriggerSkill(this, index, target);
         
     }
 
