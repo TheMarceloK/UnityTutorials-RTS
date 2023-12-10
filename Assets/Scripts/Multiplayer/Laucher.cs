@@ -62,14 +62,13 @@ public class Laucher : MonoBehaviourPunCallbacks
         PhotonNetwork.NickName = playerName.text;
         //Debug.Log(PhotonNetwork.NickName);
         Debug.Log(players.Length);
-        Debug.Log(_playersData.Count);
         playersCount.text = playerCountNum.ToString();
         //Debug.Log(playerCountNum);
         if(entrou)
         {
-            for (int i = 0; i < players.Length; i++)
+            for (int i = 0; i < playerCountNum; i++)
             {
-                _playersData[i] = new PlayerData(name, Color.red);
+                _playersData[gamePlayersParameters.myPlayerId] = new PlayerData(name, Color.red);
             }
             
         }
