@@ -38,6 +38,7 @@ public class Laucher : MonoBehaviourPunCallbacks
     [SerializeField]
     GamePlayersParameters gamePlayersParameters;
     private Dictionary<int, PlayerData> _playersData;
+    bool entrou = false;
 
 
     public int PlayerCountNum { get => playerCountNum;}
@@ -60,6 +61,15 @@ public class Laucher : MonoBehaviourPunCallbacks
         PhotonNetwork.NickName = playerName.text;
         //Debug.Log(PhotonNetwork.NickName);
         playersCount.text = playerCountNum.ToString();
+        Debug.Log(playerCountNum);
+        if(entrou)
+        {
+            for (int i = 0; i < playerCountNum; i++)
+            {
+                _playersData[gamePlayersParameters.myPlayerId] = new PlayerData(name, Color.red);
+            }
+        }
+        
     }
 
     public override void OnConnectedToMaster()
@@ -124,9 +134,8 @@ public class Laucher : MonoBehaviourPunCallbacks
         startGameButton.SetActive(PhotonNetwork.IsMasterClient);
         gamePlayersParameters.myPlayerId = playerCountNum - 1;
         Debug.Log(gamePlayersParameters.myPlayerId);
-        _playersData[gamePlayersParameters.myPlayerId] = new PlayerData(name, Color.red);
 
-
+        entrou = true;
     }
 
     public override void OnMasterClientSwitched(Player newMasterClient)
