@@ -8,7 +8,7 @@ public class CoreDataHandler : MonoBehaviour
 
     //private string _gameUID;
     public MapData _mapData;
-    
+    public GamePlayersParameters gamePlayersParameters;
     //public string GameUID => _gameUID;
     public string Scene => _mapData != null ? _mapData.sceneName : null;
     public float MapSize => _mapData.mapSize;
