@@ -15,17 +15,9 @@ public class PlayerManager : MonoBehaviour
     {
         PV = GetComponent<PhotonView>();
         Debug.Log("awake");
-        //_playersParameters.myPlayerId = PV.Controller.ActorNumber;
-        Debug.Log(PV.Controller.ActorNumber);
-        Debug.Log(_playersParameters.myPlayerId);
-        
-        Debug.Log($"P = {_playersData}");
-        Debug.Log(PV.Controller.NickName);
-        Debug.Log(PV.Controller.ActorNumber);
 
         //_playersData[PV.Controller.ActorNumber] = new PlayerData(PV.Controller.NickName, Color.red);
 
-        Debug.Log($"P = {_playersData}");
         //GamePlayersParameters p = ScriptableObject.CreateInstance<GamePlayersParameters>();
         //p.players = _playersData
         //    .Where((KeyValuePair<int, PlayerData> p) => _activePlayers[p.Key])

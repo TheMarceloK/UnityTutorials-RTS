@@ -80,7 +80,6 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(gamePlayersParameters.players.Length);
 
         if (Input.anyKeyDown)
         {

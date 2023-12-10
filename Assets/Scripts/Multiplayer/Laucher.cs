@@ -37,15 +37,16 @@ public class Laucher : MonoBehaviourPunCallbacks
     private static Dictionary<string, RoomInfo> cachedRoomList = new Dictionary<string, RoomInfo>();
     [SerializeField]
     GamePlayersParameters gamePlayersParameters;
- 
+    private Dictionary<int, PlayerData> _playersData;
+
 
     public int PlayerCountNum { get => playerCountNum;}
 
     private void Awake()
     {
+        _playersData = new Dictionary<int, PlayerData>();
         Instance = this;
         PhotonNetwork.ConnectUsingSettings();
-        
     }
 
     void Start()
@@ -83,7 +84,13 @@ public class Laucher : MonoBehaviourPunCallbacks
     }
 
     public void StartGame(string s)
-    { 
+    {
+        //GamePlayersParameters p = ScriptableObject.CreateInstance<GamePlayersParameters>();
+        gamePlayersParameters.players = _playersData
+            //.Where((KeyValuePair<int, PlayerData> p) => _activePlayers[p.Key])
+            .Select((KeyValuePair<int, PlayerData> p) => p.Value)
+            .ToArray();
+        Debug.Log(gamePlayersParameters.players.Length);
         PhotonNetwork.LoadLevel(s);
     }
 
@@ -110,6 +117,9 @@ public class Laucher : MonoBehaviourPunCallbacks
         startGameButton.SetActive(PhotonNetwork.IsMasterClient);
         gamePlayersParameters.myPlayerId = playerCountNum - 1;
         Debug.Log(gamePlayersParameters.myPlayerId);
+        _playersData[gamePlayersParameters.myPlayerId] = new PlayerData(name, Color.red);
+
+
     }
 
     public override void OnMasterClientSwitched(Player newMasterClient)
