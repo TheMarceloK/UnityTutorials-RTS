@@ -41,6 +41,10 @@ MonoBehaviour:
   - RespawnSpaceship
   - AtualizaLista
   - ComecaJogo
+  - _WrappedTrigger
+  - RPCTriggerSkill
+  - Trigger
+  - teste
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

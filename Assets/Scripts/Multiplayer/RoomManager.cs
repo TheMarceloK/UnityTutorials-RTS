@@ -22,6 +22,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
         }
         DontDestroyOnLoad(gameObject);
         instance = this;
+        PV = GetComponent<PhotonView>();
     }
 
     public override void OnEnable()
@@ -50,10 +51,12 @@ public class RoomManager : MonoBehaviourPunCallbacks
 
     //trigger de skill
     public void TriggerSkill(Unit caller, int index, GameObject target = null)
-    {
-        //Debug.Log(caller);
-        //caller.PV.RPC("RPCTriggerSkill", RpcTarget.All, index, target);
-        PV.RPC("teste", RpcTarget.All);
+    {if (PV.IsMine)
+        {
+            //Debug.Log(caller);
+            //caller.PV.RPC("RPCTriggerSkill", RpcTarget.All, index, target);
+            PV.RPC("teste", RpcTarget.All);
+        }
     }
 
     [PunRPC]
