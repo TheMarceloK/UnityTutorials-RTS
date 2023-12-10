@@ -65,6 +65,7 @@ public class UnitManager : MonoBehaviour
     {
         _collider = GetComponent<BoxCollider>();
         Unit = unit;
+        unit.playerController = FindObjectOfType<PlayerManager>();
     }
 
     public void EnableFOV(float size)

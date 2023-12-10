@@ -79,9 +79,10 @@ public class Laucher : MonoBehaviourPunCallbacks
         {
             for (int i = 0; i < players.Length; i++)
             {
-                _playersData[i] = new PlayerData(players[i].NickName, _playerColors[i]);
+                _playersData[i] = new PlayerData(players[i].NickName, _playerColors[i], players[i]);
             }
         }
+        
     }
 
     public override void OnConnectedToMaster()

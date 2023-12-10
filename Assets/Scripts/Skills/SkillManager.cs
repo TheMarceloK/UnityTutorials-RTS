@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
 
-public class SkillManager : MonoBehaviour
+public class SkillManager : MonoBehaviourPunCallbacks
 {
     public SkillData skill;
     GameObject _source;
@@ -20,6 +21,7 @@ public class SkillManager : MonoBehaviour
             _sourceContextualSource = um.contextualSource;
     }
 
+    [PunRPC]
     public void Trigger(GameObject target = null)
     {
         if (!_ready) return;
@@ -32,6 +34,8 @@ public class SkillManager : MonoBehaviour
         _SetReady(true);
     }
 
+
+    [PunRPC]
     private IEnumerator _WrappedTrigger(GameObject target)
     {
         if (_sourceContextualSource != null && skill.onStartSound)

@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Photon.Pun;
+using Packages.Rider.Editor.UnitTesting;
 
 public struct UnitLevelUpData
 {
@@ -40,6 +42,9 @@ public class Unit
     protected int _owner;
     protected int _attackDamage;
     protected float _attackRange;
+    public PhotonView PV;
+    public PlayerManager playerController;
+    
 
     public Unit(UnitData data, int owner) : this(data, owner, new List<ResourceValue>() { }) { }
     public Unit(UnitData data, int owner, List<ResourceValue> production)
@@ -60,6 +65,7 @@ public class Unit
         GameObject g = GameObject.Instantiate(data.prefab) as GameObject;
         _transform = g.transform;
         _transform.GetComponent<UnitManager>().SetOwnerMaterial(owner);
+        _transform.GetComponent<PhotonView>();
 
         _skillManagers = new List<SkillManager>();
         SkillManager sm;
@@ -71,6 +77,10 @@ public class Unit
         }
 
         _transform.GetComponent<UnitManager>().Initialize(this);
+
+
+        
+
 
         // setup minimap icon color with owner color
         GamePlayersParameters p = GameManager.instance.gamePlayersParameters;
@@ -221,8 +231,21 @@ public class Unit
         }
     }
 
-    public void TriggerSkill(int index, GameObject target = null)
+    public void teste()
     {
+
+    }
+    public void TriggerSkill(int index ,GameObject target = null)
+    {
+        Debug.Log(playerController);
+        playerController.TriggerSkill(this, index, target);
+        
+    }
+
+    [PunRPC]
+    public void RPCTriggerSkill(int index, GameObject target = null)
+    {
+        Debug.Log("Teste");
         _skillManagers[index].Trigger(target);
     }
 

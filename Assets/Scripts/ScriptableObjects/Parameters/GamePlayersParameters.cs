@@ -1,18 +1,23 @@
 ﻿using System.Runtime.Serialization;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 
 [System.Serializable]
 public class PlayerData : BinarySerializable
 {
     public string name;
     public Color color;
+    public Player player;
   //  public string facção;
 
-    public PlayerData(string name, Color color// string facção)
+    public PlayerData(string name, Color color, Player player// string facção)
         )
     {
         this.name = name;
         this.color = color;
+        this.player = player;
+        
         
 //        this.facção = facção;
 

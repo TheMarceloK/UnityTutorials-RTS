@@ -45,4 +45,8 @@ public class RoomManager : MonoBehaviourPunCallbacks
             
         }
     }
+    // inserir aqui todas as chamadas que o jogador faça.
+
+    //trigger de skill
+    
 }

@@ -86,7 +86,7 @@ public class MainMenuManager : MonoBehaviour
         {
             name = i == 0 ? "Player" : $"Enemy {i}";
             _activePlayers.Add(false);
-            _playersData[i] = new PlayerData(name, _playerColors[i]);
+            //_playersData[i] = new PlayerData(name, _playerColors[i]);
 
             Transform player = Instantiate(playerPickerPrefab, newGamePlayersList).transform;
             player.Find("Name/InputField").GetComponent<InputField>().text = name;

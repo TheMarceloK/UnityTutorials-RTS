@@ -22,14 +22,25 @@ public class PlayerController : MonoBehaviour
     
     
     PhotonView PV;
+    Unit g;
 
     private void Awake()
     {
 
         PV = GetComponent<PhotonView>();
-        
-    }
 
+    }
+    public void TriggerSkill(Unit caller, int index, GameObject target = null)
+    {
+        //Debug.Log(caller);
+        //caller.PV.RPC("RPCTriggerSkill", RpcTarget.All, index, target);
+        PV.RPC("teste", RpcTarget.All);
+    }
+    [PunRPC]
+    public void teste()
+    {
+        Debug.Log("teste");
+    }
     private void Start()
     {
         // rb = GetComponent<Rigidbody>();
@@ -38,6 +49,7 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(GetComponent<Camera>().gameObject);
             //Destroy(rb);
+            return;
         }
        
 
@@ -49,7 +61,7 @@ public class PlayerController : MonoBehaviour
         //Look();
         //Move();
         //Jump();
-     
+      
     }
 
     //void Look()
