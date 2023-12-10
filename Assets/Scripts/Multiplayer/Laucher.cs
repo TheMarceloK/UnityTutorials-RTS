@@ -86,13 +86,19 @@ public class Laucher : MonoBehaviourPunCallbacks
     public void StartGame(string s)
     {
         //GamePlayersParameters p = ScriptableObject.CreateInstance<GamePlayersParameters>();
+        
+        PhotonNetwork.LoadLevel(s);
+        
+    }
+    private void OnDisable()
+    {
         gamePlayersParameters.players = _playersData
             //.Where((KeyValuePair<int, PlayerData> p) => _activePlayers[p.Key])
             .Select((KeyValuePair<int, PlayerData> p) => p.Value)
             .ToArray();
         Debug.Log(gamePlayersParameters.players.Length);
-        PhotonNetwork.LoadLevel(s);
         CoreDataHandler.instance.gamePlayersParameters = gamePlayersParameters;
+
     }
 
     public override void OnJoinedRoom()
