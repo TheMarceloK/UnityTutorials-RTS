@@ -38,9 +38,6 @@ public class Laucher : MonoBehaviourPunCallbacks
     [SerializeField]
     GamePlayersParameters gamePlayersParameters;
     private Dictionary<int, PlayerData> _playersData;
-    Player[] players = PhotonNetwork.PlayerList;
-
-    bool entrou;
 
 
     public int PlayerCountNum { get => playerCountNum;}
@@ -61,19 +58,8 @@ public class Laucher : MonoBehaviourPunCallbacks
     private void Update()
     {
         PhotonNetwork.NickName = playerName.text;
-        Debug.Log(PhotonNetwork.NickName);
+        //Debug.Log(PhotonNetwork.NickName);
         playersCount.text = playerCountNum.ToString();
-        
-        if(entrou)
-        {
-            for(int i = 0; i > playerCountNum; i ++ ) 
-            {
-                _playersData[gamePlayersParameters.myPlayerId] = new PlayerData(players[i].NickName, Color.red);
-
-            }
-
-            entrou = false;
-        }
     }
 
     public override void OnConnectedToMaster()
@@ -104,8 +90,7 @@ public class Laucher : MonoBehaviourPunCallbacks
         PhotonNetwork.LoadLevel(s);
         
     }
-
-    private void OnDestroy()
+    private void OnDisable()
     {
         gamePlayersParameters.players = _playersData
             //.Where((KeyValuePair<int, PlayerData> p) => _activePlayers[p.Key])
@@ -122,7 +107,7 @@ public class Laucher : MonoBehaviourPunCallbacks
         
         roomNameText.text = PhotonNetwork.CurrentRoom.Name;
 
-        
+        Player[] players = PhotonNetwork.PlayerList;
 
         foreach(Transform child in playerListContent)
         {
@@ -136,11 +121,12 @@ public class Laucher : MonoBehaviourPunCallbacks
             Instantiate(playerListPrefab, playerListContent).GetComponent<PlayerListItem>().SetUp(players[i]);
         }
 
-        
         startGameButton.SetActive(PhotonNetwork.IsMasterClient);
-        gamePlayersParameters.myPlayerId = playerCountNum ;
+        gamePlayersParameters.myPlayerId = playerCountNum - 1;
         Debug.Log(gamePlayersParameters.myPlayerId);
-        entrou = true;
+        _playersData[gamePlayersParameters.myPlayerId+1] = new PlayerData(name, Color.blue);
+
+
     }
 
     public override void OnMasterClientSwitched(Player newMasterClient)
@@ -180,13 +166,9 @@ public class Laucher : MonoBehaviourPunCallbacks
             Destroy(trans.gameObject);
         }
 
-        _playersData[gamePlayersParameters.myPlayerId] = new PlayerData(name, Color.red);
-
         for (int i = 0; i < roomList.Count; i++)
         {
-
             RoomInfo info = roomList[i];
-            
             if (info.RemovedFromList)
             {
                 cachedRoomList.Remove(info.Name);
@@ -207,5 +189,6 @@ public class Laucher : MonoBehaviourPunCallbacks
     {
         Instantiate(playerListPrefab, playerListContent).GetComponent<PlayerListItem>().SetUp(newPlayer);
 
+        _playersData[gamePlayersParameters.myPlayerId] = new PlayerData(name, Color.red);
     }
 }
