@@ -2,7 +2,6 @@
 using System.Linq;
 using UnityEngine;
 using Photon.Pun;
-using Packages.Rider.Editor.UnitTesting;
 
 public struct UnitLevelUpData
 {
