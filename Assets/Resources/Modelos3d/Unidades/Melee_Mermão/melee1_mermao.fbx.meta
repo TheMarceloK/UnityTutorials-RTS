@@ -1,23 +1,20 @@
 fileFormatVersion: 2
-guid: b82d73dc9c175b448b49da851afbf6f4
+guid: e4d1e40f28a182740b1571451045d7eb
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: -1858826728141052955
-    second: corsa_melee|const|const|acao
+      74: 4714247571406414341
+    second: melee1_mermao.001|ataque
   - first:
-      74: 4884696691047462566
-    second: corsa_melee|const|const|idle
+      74: -4617164347036599999
+    second: melee1_mermao.001|idle
   - first:
-      74: 7645122644612204304
-    second: corsa_melee|const|const|morte
+      74: 5054387505760269796
+    second: melee1_mermao.001|morte
   - first:
-      74: -2074531328080930411
-    second: corsa_melee|const|const|vazio
-  - first:
-      74: -1979392198231024589
-    second: corsa_melee|walk
+      74: 6732407491965254146
+    second: melee1_mermao.001|walk
   externalObjects: {}
   materials:
     materialImportMode: 2
