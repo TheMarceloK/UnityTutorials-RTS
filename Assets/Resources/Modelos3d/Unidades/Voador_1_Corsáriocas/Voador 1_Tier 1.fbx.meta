@@ -2,7 +2,16 @@ fileFormatVersion: 2
 guid: a0185035128883640a1bbb637eba1efb
 ModelImporter:
   serializedVersion: 20200
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -966252703591615540
+    second: bomba|attack
+  - first:
+      74: -251351218608039746
+    second: Armature|attack
+  - first:
+      74: -1978303741906493279
+    second: Armature|idle
   externalObjects: {}
   materials:
     materialImportMode: 2

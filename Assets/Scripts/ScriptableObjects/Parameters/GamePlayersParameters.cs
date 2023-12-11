@@ -9,9 +9,9 @@ public class PlayerData : BinarySerializable
     public string name;
     public Color color;
     public Player player;
-  //  public string facção;
+    public int facção;
 
-    public PlayerData(string name, Color color, Player player// string facção)
+    public PlayerData(string name, Color color, Player player, int facção
         )
     {
         this.name = name;
@@ -19,7 +19,7 @@ public class PlayerData : BinarySerializable
         this.player = player;
         
         
-//        this.facção = facção;
+        this.facção = facção;
 
     }
 

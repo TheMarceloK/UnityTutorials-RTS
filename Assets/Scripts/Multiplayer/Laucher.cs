@@ -40,6 +40,7 @@ public class Laucher : MonoBehaviourPunCallbacks
     private Dictionary<int, PlayerData> _playersData;
     bool entrou = false;
     Player[] players ;
+    public int facção;
 
     private static readonly Color[] _playerColors = new Color[]
     {
@@ -71,18 +72,16 @@ public class Laucher : MonoBehaviourPunCallbacks
     private void Update()
     {
         PhotonNetwork.NickName = playerName.text;
-       
-        
+
         playersCount.text = playerCountNum.ToString();
-        
+
         if (entrou)
         {
             for (int i = 0; i < players.Length; i++)
             {
-                _playersData[i] = new PlayerData(players[i].NickName, _playerColors[i], players[i]);
+                _playersData[i] = new PlayerData(players[i].NickName, _playerColors[i], players[i],facção);
             }
         }
-        
     }
 
     public override void OnConnectedToMaster()

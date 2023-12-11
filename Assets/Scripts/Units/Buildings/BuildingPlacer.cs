@@ -13,6 +13,7 @@ public class BuildingPlacer : MonoBehaviour
     private Vector3 _lastPlacementPosition;
 
     private UnitManager _builderManager;
+    
 
     private void Start()
     {
@@ -24,14 +25,14 @@ public class BuildingPlacer : MonoBehaviour
         {
             Transform spawnpoints = GameObject.Find("Spawnpoints").transform;
 
-            BuildingData initialBuilding = GameManager.instance.gameGlobalParameters.initialBuilding;
+            BuildingData[] initialBuilding = GameManager.instance.gameGlobalParameters.initialBuildings ;
             GamePlayersParameters p = GameManager.instance.gamePlayersParameters;
             Vector3 pos;
             for (int i = 0; i < p.players.Length; i++)
             {
 
                 pos = spawnpoints.GetChild(i).position;
-                SpawnBuilding(initialBuilding, i, pos);
+                SpawnBuilding(initialBuilding[], i, pos);
                 if (i == p.myPlayerId)
                     Camera.main.GetComponent<CameraManager>().SetPosition(pos); 
                 

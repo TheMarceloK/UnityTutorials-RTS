@@ -14,7 +14,7 @@ public class GameGlobalParameters : GameParameters
     public float dayInitialRatio;
 
     [Header("Units")]
-    public BuildingData initialBuilding; // tem que tornar em array com cada um dos nexus do jogo, e fazer com que seja selecionado de acordo com a facção escolhidada pelo jogador
+    public BuildingData[] initialBuildings; // tem que tornar em array com cada um dos nexus do jogo, e fazer com que seja selecionado de acordo com a facção escolhidada pelo jogador
     public AnimationCurve experienceEvolutionCurve;
     public AnimationCurve productionMultiplierCurve;
     public AnimationCurve attackDamageMultiplierCurve;

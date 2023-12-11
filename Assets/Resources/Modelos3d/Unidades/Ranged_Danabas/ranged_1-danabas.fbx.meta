@@ -2,7 +2,16 @@ fileFormatVersion: 2
 guid: 66e27b21974dacb46973a18aefda5b7b
 ModelImporter:
   serializedVersion: 20200
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -650001200582194947
+    second: Armature|arrack
+  - first:
+      74: -1978303741906493279
+    second: Armature|idle
+  - first:
+      74: -4799524434163024911
+    second: Armature|walk
   externalObjects: {}
   materials:
     materialImportMode: 2
