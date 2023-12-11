@@ -17,7 +17,7 @@ MonoBehaviour:
   description: "Estrutura Principal. Usada para receber recursos coletados. Pode
     usar a habilidade [nome da habilidade] para produzir construtores gratuitos tempor\xE1rios"
   healthpoints: 500
-  prefab: {fileID: 4893885829384556338, guid: 5a40ce2bf56d78d4aa3133b76b39dd08, type: 3}
+  prefab: {fileID: 4893885829384556338, guid: d8fd7308b66160742a305da6f17a1ef0, type: 3}
   sprite: {fileID: 0}
   cost:
   - code: 0
@@ -32,6 +32,6 @@ MonoBehaviour:
   onSelectSound: {fileID: 0}
   ambientSound: {fileID: 0}
   constructionMeshes:
-  - {fileID: 1628868490639066790, guid: 0392d1c23bc47a343a496e926620b8bc, type: 3}
-  - {fileID: 1628868490639066790, guid: 0392d1c23bc47a343a496e926620b8bc, type: 3}
-  - {fileID: 1628868490639066790, guid: 0392d1c23bc47a343a496e926620b8bc, type: 3}
+  - {fileID: -4252228335409972894, guid: 668c78909037a4025b3debb3acdb213e, type: 3}
+  - {fileID: -7756893256904936357, guid: 63fd3fecfe08747c7a08d9c990b44b0f, type: 3}
+  - {fileID: 1628868490639066790, guid: c3bd6841ee5f3de4da0a73cc01314fc6, type: 3}
