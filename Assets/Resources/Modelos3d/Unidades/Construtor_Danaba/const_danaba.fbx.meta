@@ -1,14 +1,23 @@
 fileFormatVersion: 2
-guid: 84561de1d4975174bbedb623d8aebf88
+guid: ac120ad36c956f347909f35972ff6b7a
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: -8945691123924629249
-    second: Armature|Idle
+      74: -7708366012840009228
+    second: const_danaba|acao (atk/mine)
   - first:
-      74: -9161968714768482601
-    second: Armature|Mover
+      74: -2512679131167804465
+    second: const_danaba|andar
+  - first:
+      74: 7320567502752180990
+    second: const_danaba|idle
+  - first:
+      74: -9036592311609620634
+    second: const_danaba|morte
+  - first:
+      74: 8719289740622427364
+    second: const_danaba|walk
   externalObjects: {}
   materials:
     materialImportMode: 2
