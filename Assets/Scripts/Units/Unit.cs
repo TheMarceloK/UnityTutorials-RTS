@@ -235,15 +235,15 @@ public class Unit
     {
 
     }
-    public void TriggerSkill(int index ,GameObject target = null)
-    {
-        Debug.Log(playerController);
-        playerController.TriggerSkill(this, index, target);
+    //public void TriggerSkill(int index ,GameObject target = null)
+    //{
+    //    Debug.Log(playerController);
+    //    playerController.TriggerSkill(this, index, target);
         
-    }
+    //}
 
     [PunRPC]
-    public void RPCTriggerSkill(int index, GameObject target = null)
+    public void TriggerSkill(int index, GameObject target = null)
     {
         Debug.Log("Teste");
         _skillManagers[index].Trigger(target);
