@@ -133,7 +133,7 @@ MonoBehaviour:
   zoomSpeed: 30
   altitude: 40
   groundTarget: {fileID: 7966030918317384193}
-  autoAdaptAltitude: 1
+  autoAdaptAltitude: 0
 --- !u!114 &-5131290684076681527
 MonoBehaviour:
   m_ObjectHideFlags: 0

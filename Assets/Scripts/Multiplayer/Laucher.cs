@@ -40,7 +40,7 @@ public class Laucher : MonoBehaviourPunCallbacks
     private Dictionary<int, PlayerData> _playersData;
     bool entrou = false;
     Player[] players ;
-    public int facção;
+    public int facção =1;
 
     private static readonly Color[] _playerColors = new Color[]
     {
