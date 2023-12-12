@@ -14,10 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   code: "doca_cors\xE1riocas"
   unitName: "Doca Cors\xE1riocas"
-  description: "Estrutura Principal. Usada para receber recursos coletados. Pode
-    usar a habilidade [nome da habilidade] para produzir construtores gratuitos tempor\xE1rios"
+  description: 
   healthpoints: 500
-  prefab: {fileID: 0}
+  prefab: {fileID: 4893885829384556338, guid: cc87286cee2ab5b4da894d0ab030d6f2, type: 3}
   sprite: {fileID: 0}
   cost:
   - code: 0
@@ -34,4 +33,4 @@ MonoBehaviour:
   constructionMeshes:
   - {fileID: -4252228335409972894, guid: 668c78909037a4025b3debb3acdb213e, type: 3}
   - {fileID: -7756893256904936357, guid: 63fd3fecfe08747c7a08d9c990b44b0f, type: 3}
-  - {fileID: 8691780276856062721, guid: aed1d8a8767693c49b399392efa46eee, type: 3}
+  - {fileID: -5768599983786214985, guid: 022791007a8248f4b98656db8067e51f, type: 3}

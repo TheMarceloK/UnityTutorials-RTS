@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   code: "comida_cors\xE1riocas"
   unitName: "Comida Cors\xE1riocas"
-  description: "Estrutura Principal. Usada para receber recursos coletados. Pode
-    usar a habilidade [nome da habilidade] para produzir construtores gratuitos tempor\xE1rios"
+  description: 
   healthpoints: 500
   prefab: {fileID: 4893885829384556338, guid: 39fc01e2f076dfb4883b5992a98b9504, type: 3}
   sprite: {fileID: 0}

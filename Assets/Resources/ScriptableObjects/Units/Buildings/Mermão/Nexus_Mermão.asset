@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   code: "nexus_merm\xE3o"
   unitName: "Nexus Merm\xE3o"
-  description: "Estrutura Principal. Usada para receber recursos coletados. Pode
-    usar a habilidade [nome da habilidade] para produzir construtores gratuitos tempor\xE1rios"
+  description: 
   healthpoints: 500
   prefab: {fileID: 4893885829384556338, guid: 9234fa9505895c54cbe6d1d51a5278e5, type: 3}
   sprite: {fileID: 0}
@@ -32,6 +31,6 @@ MonoBehaviour:
   onSelectSound: {fileID: 0}
   ambientSound: {fileID: 0}
   constructionMeshes:
-  - {fileID: 6828603903759911698, guid: c241f57075f53164b8f9c027f264d3ff, type: 3}
-  - {fileID: 6828603903759911698, guid: c241f57075f53164b8f9c027f264d3ff, type: 3}
-  - {fileID: 6828603903759911698, guid: c241f57075f53164b8f9c027f264d3ff, type: 3}
+  - {fileID: -4252228335409972894, guid: 668c78909037a4025b3debb3acdb213e, type: 3}
+  - {fileID: -7756893256904936357, guid: 63fd3fecfe08747c7a08d9c990b44b0f, type: 3}
+  - {fileID: 453766052581525624, guid: dde13c3c1681cb743afc817bba863559, type: 3}
