@@ -42,6 +42,15 @@ public class Laucher : MonoBehaviourPunCallbacks
     Player[] players ;
     public int facção =1;
 
+    [SerializeField]
+    private GameObject _rooomMenu;
+    [SerializeField]
+    private GameObject _opcoesTela;
+    [SerializeField]
+    private GameObject _creditosTela;
+    [SerializeField]
+    private GameObject _encontrarSalaTela;
+
     private static readonly Color[] _playerColors = new Color[]
     {
             Color.red,
@@ -164,7 +173,8 @@ public class Laucher : MonoBehaviourPunCallbacks
     public void LeaveRoom()
     {
         PhotonNetwork.LeaveRoom();
-        MenuManager.Instance.OpenMenu("loading");
+        _rooomMenu.SetActive(false);
+        //MenuManager.Instance.OpenMenu("loading");
     }
 
     public void JoinRoom(RoomInfo info)
@@ -173,6 +183,31 @@ public class Laucher : MonoBehaviourPunCallbacks
         PhotonNetwork.JoinRoom(info.Name);
         MenuManager.Instance.OpenMenu("room");
         
+    }
+
+    public void AbrirOpcoes()
+    {
+        _opcoesTela.SetActive(true);
+    }
+
+    public void FecharOpcoes()
+    {
+        _opcoesTela.SetActive(false);
+    }
+
+    public void AbrirCreditos()
+    {
+        _creditosTela.SetActive(true);
+    }
+
+    public void FecharCreditos()
+    {
+        _creditosTela.SetActive(false);
+    }
+
+    public void FecharEncontrarSala()
+    {
+        _encontrarSalaTela.SetActive(false);
     }
 
     public override void OnLeftRoom()
@@ -212,5 +247,10 @@ public class Laucher : MonoBehaviourPunCallbacks
         players = PhotonNetwork.PlayerList;
         entrou = true;
         Instantiate(playerListPrefab, playerListContent).GetComponent<PlayerListItem>().SetUp(newPlayer);
+    }
+
+    public void FecharJogo()
+    {
+        Application.Quit();
     }
 }
