@@ -22,7 +22,11 @@ MonoBehaviour:
   - code: 0
     amount: 400
   canProduce: 00000000
-  skills: []
+  skills:
+  - {fileID: 11400000, guid: 6e080824bc3899f40a4bb07aca2c14c4, type: 2}
+  - {fileID: 11400000, guid: a51a2b75f558566468d9800f25cc1f28, type: 2}
+  - {fileID: 11400000, guid: 526ccb8983051f149811b0f806f80034, type: 2}
+  - {fileID: 11400000, guid: d210bdcd829fb654ba3a96c9dbf19aeb, type: 2}
   fieldOfView: 40
   attackRange: 0
   attackDamage: 0

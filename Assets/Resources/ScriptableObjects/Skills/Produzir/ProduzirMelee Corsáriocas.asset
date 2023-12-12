@@ -16,7 +16,7 @@ MonoBehaviour:
   skillName: "Produzir Voador Merm\xE3o"
   description: 
   type: 0
-  unitReference: {fileID: 11400000, guid: f04499ad3b7ecc04d93cad0948767496, type: 2}
+  unitReference: {fileID: 11400000, guid: 23d42f4895e67a440bf254adedaf8e6d, type: 2}
   castTime: 1
   cooldown: 1
   sprite: {fileID: 0}

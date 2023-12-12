@@ -23,7 +23,10 @@ MonoBehaviour:
     amount: 400
   canProduce: 00000000
   skills:
-  - {fileID: 11400000, guid: ec00e33a40c434f6b97b314d4e96576c, type: 2}
+  - {fileID: 11400000, guid: a9bceeef6fe4c014da836ae1ea0cfe3b, type: 2}
+  - {fileID: 11400000, guid: ac6ef9e16f9db354bad9ef8b096f94df, type: 2}
+  - {fileID: 11400000, guid: 121f50cf6e9d63f4c8df14c0f8c6a39a, type: 2}
+  - {fileID: 11400000, guid: f91ace0f2b2ebcf40901994c792d6952, type: 2}
   fieldOfView: 40
   attackRange: 0
   attackDamage: 0
