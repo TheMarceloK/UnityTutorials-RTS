@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   code: "produzir_suporte_merm\xE3o"
   skillName: "Produzir Suporte Merm\xE3o"
-  description: "Produzir Suporte Merm\xE3o"
+  description: 
   type: 0
-  unitReference: {fileID: 11400000, guid: 3223d97fca6274745aafc2f321195e3c, type: 2}
+  unitReference: {fileID: 11400000, guid: 30adeeed700a76643834da4ffdd4b089, type: 2}
   castTime: 1
   cooldown: 1
   sprite: {fileID: 0}

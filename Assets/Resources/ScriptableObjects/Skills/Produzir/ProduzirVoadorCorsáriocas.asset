@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39a57a855255a4545a0014b6b052d14c, type: 3}
   m_Name: "ProduzirVoadorCors\xE1riocas"
   m_EditorClassIdentifier: 
-  code: "produzir_voador-cors\xE1riocas"
+  code: "produzir_voador_cors\xE1riocas"
   skillName: "Produzir Voador Cors\xE1rioca"
-  description: "Produzir Voador Cors\xE1rioca"
+  description: 
   type: 0
-  unitReference: {fileID: 11400000, guid: 1f09f8ba6f761294ea590d38be6b7dec, type: 2}
+  unitReference: {fileID: 11400000, guid: c73acd96885bb9c44bcdc1a4a63f6ad9, type: 2}
   castTime: 1
   cooldown: 1
   sprite: {fileID: 0}

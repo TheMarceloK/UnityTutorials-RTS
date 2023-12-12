@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39a57a855255a4545a0014b6b052d14c, type: 3}
-  m_Name: "ProduzirConstrutorCors\xE1riocas"
+  m_Name: ProduzirRanged Mermao
   m_EditorClassIdentifier: 
-  code: "produzir_construtor_cors\xE1riocas"
-  skillName: "Produzir Construtor Cors\xE1riocas"
+  code: produzir_ranged_mermao
+  skillName: Produzir Ranged Mermao
   description: 
   type: 0
-  unitReference: {fileID: 11400000, guid: d10f7d458e3be3a4ab98622e853ba3f4, type: 2}
+  unitReference: {fileID: 11400000, guid: 0f01f018a2a190f45b63f0841cd02b6e, type: 2}
   castTime: 1
   cooldown: 1
   sprite: {fileID: 0}

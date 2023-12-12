@@ -20,10 +20,10 @@ MonoBehaviour:
   sprite: {fileID: 0}
   cost:
   - code: 0
-    amount: 400
-  canProduce: 00000000
+    amount: 300
+  canProduce: 
   skills:
-  - {fileID: 11400000, guid: ec00e33a40c434f6b97b314d4e96576c, type: 2}
+  - {fileID: 11400000, guid: f3c25e408f2d26e4f83eb8b8d3ae7ce9, type: 2}
   fieldOfView: 40
   attackRange: 0
   attackDamage: 0

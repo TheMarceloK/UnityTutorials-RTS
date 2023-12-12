@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   code: produzir_aquatico_danabas
   skillName: Produzir Aquatico Danabas
-  description: Produzir Aquatico Danabas
+  description: 
   type: 0
-  unitReference: {fileID: 11400000, guid: b284d1e364c02b04488375021d1d2a04, type: 2}
+  unitReference: {fileID: 11400000, guid: 229b8899da8140445b0e9378237dd874, type: 2}
   castTime: 1
   cooldown: 1
   sprite: {fileID: 0}

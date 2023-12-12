@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   code: "produzir_aquatico_cors\xE1riocas"
   skillName: "Produzir Aquatico Cors\xE1riocas"
-  description: "Produzir Aquatico Cors\xE1riocas"
+  description: 
   type: 0
-  unitReference: {fileID: 11400000, guid: acdd357505a1ea7408ceb2b2cac1f29f, type: 2}
+  unitReference: {fileID: 11400000, guid: 7db67222e00a090409cc91811585fcbd, type: 2}
   castTime: 1
   cooldown: 1
   sprite: {fileID: 0}

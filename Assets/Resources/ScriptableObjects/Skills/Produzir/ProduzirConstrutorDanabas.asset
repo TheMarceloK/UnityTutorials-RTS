@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: ProduzirConstrutorDanabas
   m_EditorClassIdentifier: 
   code: produzir_construtor_danabas
-  skillName: Produce a Worker
-  description: Produce a worker.
+  skillName: Produzir Construtor Danabas
+  description: 
   type: 0
-  unitReference: {fileID: 11400000, guid: d6a511ab6e4537148992c3f41687aa1b, type: 2}
+  unitReference: {fileID: 11400000, guid: f25627a4431e89a4cb034ffd4e87129f, type: 2}
   castTime: 1
   cooldown: 1
   sprite: {fileID: 0}

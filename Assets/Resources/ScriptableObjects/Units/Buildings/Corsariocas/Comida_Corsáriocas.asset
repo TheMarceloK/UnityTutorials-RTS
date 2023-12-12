@@ -20,16 +20,9 @@ MonoBehaviour:
   sprite: {fileID: 0}
   cost:
   - code: 0
-    amount: 400
+    amount: 50
   canProduce: 00000000
-  skills:
-  - {fileID: 11400000, guid: 1f47e9de111ddb44eab3bac2195a0cad, type: 2}
-  - {fileID: 11400000, guid: 73a3a09c2ff1ece48bd134e6c9839c40, type: 2}
-  - {fileID: 11400000, guid: f3c25e408f2d26e4f83eb8b8d3ae7ce9, type: 2}
-  - {fileID: 11400000, guid: a23f5b8f6bf717f4b809bb73cd6e915e, type: 2}
-  - {fileID: 11400000, guid: 121f50cf6e9d63f4c8df14c0f8c6a39a, type: 2}
-  - {fileID: 11400000, guid: f216ccd0d9cf4b743affe43ad3918c19, type: 2}
-  - {fileID: 11400000, guid: d210bdcd829fb654ba3a96c9dbf19aeb, type: 2}
+  skills: []
   fieldOfView: 40
   attackRange: 0
   attackDamage: 0

@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39a57a855255a4545a0014b6b052d14c, type: 3}
   m_Name: ProduzirRangedDanabas
   m_EditorClassIdentifier: 
-  code: Produzir Ranged Danabas
+  code: produzir_ranged_danabas
   skillName: Produzir Ranged Danabas
-  description: Produzir Ranged Danabas
+  description: 
   type: 0
-  unitReference: {fileID: 11400000, guid: dab8f6c4dfd110e478c6941a230a3982, type: 2}
+  unitReference: {fileID: 11400000, guid: 155f00222c6f8c04ba0124a31aa75576, type: 2}
   castTime: 1
   cooldown: 1
   sprite: {fileID: 0}

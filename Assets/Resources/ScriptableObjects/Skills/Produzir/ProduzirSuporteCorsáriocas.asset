@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39a57a855255a4545a0014b6b052d14c, type: 3}
-  m_Name: "ProduzirConstrutorCors\xE1riocas"
+  m_Name: "ProduzirSuporteCors\xE1riocas"
   m_EditorClassIdentifier: 
-  code: "produzir_construtor_cors\xE1riocas"
-  skillName: "Produzir Construtor Cors\xE1riocas"
+  code: "produzir_suporte_cors\xE1riocas"
+  skillName: "Produzir Suporte Cors\xE1riocas"
   description: 
   type: 0
-  unitReference: {fileID: 11400000, guid: d10f7d458e3be3a4ab98622e853ba3f4, type: 2}
+  unitReference: {fileID: 11400000, guid: 00ce559199b921b44896a6c5189dcc5f, type: 2}
   castTime: 1
   cooldown: 1
   sprite: {fileID: 0}
