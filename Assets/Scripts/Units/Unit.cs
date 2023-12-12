@@ -62,6 +62,7 @@ public class Unit
         _attackRange = data.attackRange;
         
         GameObject g = GameObject.Instantiate(data.prefab) as GameObject;
+         
         _transform = g.transform;
         _transform.GetComponent<UnitManager>().SetOwnerMaterial(owner);
         _transform.GetComponent<PhotonView>();
@@ -243,8 +244,7 @@ public class Unit
 
     [PunRPC]
     public void TriggerSkill(int index, GameObject target = null)
-    {
-        Debug.Log("Teste");
+    {   
         _skillManagers[index].Trigger(target);
     }
 

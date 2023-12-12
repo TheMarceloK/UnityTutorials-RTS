@@ -634,7 +634,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: aa8dd722fbfa72b44ba894eb45b82d7d,
         type: 3}
       propertyPath: m_Name
-      value: const_danaba 1
+      value: Mesh
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa8dd722fbfa72b44ba894eb45b82d7d, type: 3}
