@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3d7baebcf3947ce9b0366a4348bef9, type: 3}
   m_Name: "Construtor Cors\xE1riocas"
   m_EditorClassIdentifier: 
-  code: worker
-  unitName: Worker
-  description: A base unit to build your town!
+  code: construtor_corsariocas
+  unitName: Construtor Corsarioca
+  description: 
   healthpoints: 30
-  prefab: {fileID: 4893885829384556338, guid: 03face13f501747ae8285d6b6580b96f, type: 3}
+  prefab: {fileID: 4893885829384556338, guid: 4f20b0d11a402d34a93116d224db753d, type: 3}
   sprite: {fileID: 0}
   cost:
   - code: 0

@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3d7baebcf3947ce9b0366a4348bef9, type: 3}
   m_Name: Aquatico Danabas
   m_EditorClassIdentifier: 
-  code: aquatico
-  unitName: Aquatico
-  description: Aquatico
+  code: aquatico_danabas
+  unitName: Aquatico Danabas
+  description: 
   healthpoints: 30
-  prefab: {fileID: 4893885829384556338, guid: 3b214c7ee536447728dfcb29fb018e2e, type: 3}
+  prefab: {fileID: 4893885829384556338, guid: 51b236aa8747864428e14a95f849ea10, type: 3}
   sprite: {fileID: 0}
   cost:
   - code: 0

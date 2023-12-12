@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3d7baebcf3947ce9b0366a4348bef9, type: 3}
   m_Name: Voador Danabas
   m_EditorClassIdentifier: 
-  code: voador
-  unitName: Voador
-  description: Aquatico
+  code: voador_danabas
+  unitName: Voador Danabas
+  description: 
   healthpoints: 30
-  prefab: {fileID: 4893885829384556338, guid: 3b214c7ee536447728dfcb29fb018e2e, type: 3}
+  prefab: {fileID: 4893885829384556338, guid: 29f7158faed58d44d844571fa1b96827, type: 3}
   sprite: {fileID: 0}
   cost:
   - code: 0

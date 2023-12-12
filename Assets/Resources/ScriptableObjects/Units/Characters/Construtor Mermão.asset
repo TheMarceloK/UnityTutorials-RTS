@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3d7baebcf3947ce9b0366a4348bef9, type: 3}
   m_Name: "Construtor Merm\xE3o"
   m_EditorClassIdentifier: 
-  code: worker
-  unitName: Worker
-  description: A base unit to build your town!
+  code: construtor_mermao
+  unitName: Construtor Mermao
+  description: 
   healthpoints: 30
-  prefab: {fileID: 4893885829384556338, guid: 03face13f501747ae8285d6b6580b96f, type: 3}
+  prefab: {fileID: 4893885829384556338, guid: 0ff0e4f73d4d66a4d80ea181efebcddf, type: 3}
   sprite: {fileID: 0}
   cost:
   - code: 0

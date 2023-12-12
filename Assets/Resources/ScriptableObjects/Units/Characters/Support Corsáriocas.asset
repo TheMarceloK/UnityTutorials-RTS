@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3d7baebcf3947ce9b0366a4348bef9, type: 3}
   m_Name: "Support Cors\xE1riocas"
   m_EditorClassIdentifier: 
-  code: melee
-  unitName: Melee
-  description: Melee
+  code: suporte_corsariocas
+  unitName: Suporte Coorsariocas
+  description: 
   healthpoints: 30
-  prefab: {fileID: 4893885829384556338, guid: 3b214c7ee536447728dfcb29fb018e2e, type: 3}
+  prefab: {fileID: 4893885829384556338, guid: bf03f8ebace15794b8ead52e10404e82, type: 3}
   sprite: {fileID: 0}
   cost:
   - code: 0

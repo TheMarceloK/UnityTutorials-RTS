@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3d7baebcf3947ce9b0366a4348bef9, type: 3}
   m_Name: "Ranged Cors\xE1riocas"
   m_EditorClassIdentifier: 
-  code: ranged
-  unitName: Ranged
-  description: ranged
+  code: ranged_corsariocas
+  unitName: Ranged Corsariocas
+  description: 
   healthpoints: 30
-  prefab: {fileID: 4893885829384556338, guid: 3b214c7ee536447728dfcb29fb018e2e, type: 3}
+  prefab: {fileID: 4893885829384556338, guid: 30bbbcbf8cad1cb4198ab0019f7daff6, type: 3}
   sprite: {fileID: 0}
   cost:
   - code: 0
