@@ -76,7 +76,7 @@ public class GameManager : MonoBehaviour
         float p = terrainSize / 2;
 
         Debug.Log(terrainSize);
-        minimapAnchor.position = new Vector3(p, 0, p);
+        minimapAnchor.position = new Vector3(p, 30, p);
         Debug.Log(minimapAnchor);
         minimapCamera.orthographicSize = p;
         Debug.Log(minimapCamera.orthographicSize);
